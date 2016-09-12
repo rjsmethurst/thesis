@@ -1,0 +1,73 @@
+\documentclass[12pt]{ociamthesis}  % default square logo 
+%\documentclass[12pt,beltcrest]{ociamthesis} % use old belt crest logo
+%\documentclass[12pt,shieldcrest]{ociamthesis} % use older shield crest logo
+
+%load any additional packages
+\usepackage{amssymb}
+
+%input macros (i.e. write your own macros file called mymacros.tex 
+%and uncomment the next line)
+%\include{mymacros}
+
+\title{The influence of morphology, AGN and environment     %your thesis title,
+        on the quenching histories of galaxies}   %note \\[1ex] is a line break in the title
+
+\author{Rebecca Jane Smethurst}             %your name
+\college{Pembroke College}  %your college
+
+%\renewcommand{\submittedtext}{change the default text here if needed}
+\degree{Doctor of Philosophy}     %the degree
+\degreedate{Michaelmas 2016}         %the degree date
+
+%end the preamble and start the document
+\begin{document}
+
+%this baselineskip gives sufficient line spacing for an examiner to easily
+%markup the thesis with comments
+\baselineskip=18pt plus1pt
+
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+
+\maketitle                  % create a title page from the preamble info
+\begin{dedication}
+This thesis is dedicated to\\
+ someone\\
+for some special reason\\
+\end{dedication}
+
+\begin{acknowledgements}
+Thank ALLL TEH people. 
+\end{acknowledgements}
+
+\begin{abstract}  
+GZ shit happens.         % include the abstract
+\end{abstract}
+
+\begin{romanpages}          % start roman page numbering
+\tableofcontents            % generate and include a table of contents
+\listoffigures              % generate and include a list of figures
+\end{romanpages}            % end roman page numbering
+
+%now include the files of latex for each of the chapters etc
+\chapter{Introduction}
+\chapter{Starpy}
+\chapter{Green Valley}
+\chapter{AGN}
+\section{Bulgeless galaxies}
+\chapter{Environment}
+\chapter{Discussion}
+\chapter{Conclusions}
+
+
+%next line adds the Bibliography to the contents page
+\addcontentsline{toc}{chapter}{Bibliography}
+%uncomment next line to change bibliography name to references
+%\renewcommand{\bibname}{References}
+\bibliography{refs}        %use a bibtex bibliography file refs.bib
+\bibliographystyle{plain}  %use the plain bibliography style
+
+\end{document}
+
