@@ -1,0 +1,101 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: introduction/introduction.aux
+A level-1 auxiliary file: starpy/starpy.aux
+A level-1 auxiliary file: morphology/morph.aux
+A level-1 auxiliary file: agn/agn.aux
+A level-1 auxiliary file: environment/environment.aux
+A level-1 auxiliary file: discussion/discussion.aux
+A level-1 auxiliary file: conclusion/conclusions.aux
+The style file: mn2e.bst
+Database file #1: refs.bib
+Warning--I didn't find a database entry for "Baldry04"
+Warning--I didn't find a database entry for "Willmer06"
+Warning--I didn't find a database entry for "BLB08"
+Warning--I didn't find a database entry for "Chester64"
+Warning--I didn't find a database entry for "BLE92"
+Warning--I didn't find a database entry for "Driver06"
+Warning--I didn't find a database entry for "Faber07"
+Warning--I didn't find a database entry for "Strat01"
+Warning--I didn't find a database entry for "Salim07"
+Warning--I didn't find a database entry for "Sch07"
+Warning--I didn't find a database entry for "CHV08"
+Warning--I didn't find a database entry for "Masters10"
+Warning--I didn't find a database entry for "Sch09"
+Warning--I didn't find a database entry for "Arnouts07"
+Warning--I didn't find a database entry for "Martin07"
+Warning--I didn't find a database entry for "Bell04"
+Warning--I didn't find a database entry for "Wyder07"
+Warning--I didn't find a database entry for "Schim07"
+Warning--I didn't find a database entry for "Mendez11"
+Warning--I didn't find a database entry for "Gonc12"
+Warning--I didn't find a database entry for "Sch2014"
+Warning--I didn't find a database entry for "Pan14"
+Warning--I didn't find a database entry for "Noeske07"
+Warning--I didn't find a database entry for "Peng"
+Warning--I didn't find a database entry for "Cheung12"
+Warning--I didn't find a database entry for "Barro13"
+Warning--I didn't find a database entry for "MFB12"
+Warning--I didn't find a database entry for "Coil08"
+Warning--I didn't find a database entry for "Fang13"
+Warning--I didn't find a database entry for "Masters11"
+Warning--I didn't find a database entry for "Mag98"
+Warning--I didn't find a database entry for "MH03"
+Warning--I didn't find a database entry for "HR04"
+Warning--I didn't find a database entry for "SR98"
+Warning--I didn't find a database entry for "Bower06"
+Warning--I didn't find a database entry for "Somer08"
+Warning--I didn't find a database entry for "Fab06"
+Warning--I didn't find a database entry for "CB08"
+Warning--I didn't find a database entry for "Sch2010"
+Warning--I didn't find a database entry for "daddi10"
+Warning--I didn't find a database entry for "kennicutt77"
+Warning--I didn't find a database entry for "peng12"
+Warning--I didn't find a database entry for "faber12"
+Warning--I didn't find a database entry for "?"
+Warning--I didn't find a database entry for "Sivia"
+Warning--I didn't find a database entry for "MacKay"
+Warning--I didn't find a database entry for "Dan"
+You've used 16 entries,
+            2983 wiz_defined-function locations,
+            824 strings with 10263 characters,
+and the built_in function-call counts, 13372 in all, are:
+= -- 864
+> -- 1840
+< -- 0
++ -- 569
+- -- 555
+* -- 1099
+:= -- 2547
+add.period$ -- 0
+call.type$ -- 16
+change.case$ -- 248
+chr.to.int$ -- 16
+cite$ -- 16
+duplicate$ -- 270
+empty$ -- 414
+format.name$ -- 585
+if$ -- 2593
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 16
+newline$ -- 52
+num.names$ -- 64
+pop$ -- 234
+preamble$ -- 1
+purify$ -- 248
+quote$ -- 0
+skip$ -- 404
+stack$ -- 0
+substring$ -- 332
+swap$ -- 16
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 144
+warning$ -- 0
+while$ -- 65
+width$ -- 0
+write$ -- 162
+(There were 47 warnings)

@@ -1,0 +1,81 @@
+\begin{thebibliography}{16}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Baldry} {et~al}\mbox{.}(2006){Baldry}, {Balogh}, {Bower},
+  {Glazebrook}, {Nichol}, {Bamford}, \& {Budavari}}]{Baldry06}
+{Baldry} I.~K., {Balogh} M.~L., {Bower} R.~G., {Glazebrook} K., {Nichol} R.~C.,
+  {Bamford} S.~P., {Budavari} T., 2006, \mnras, 373, 469
+
+\bibitem[{{Bamford} {et~al}\mbox{.}(2009){Bamford}, {Nichol}, {Baldry}, {Land},
+  {Lintott}, {Schawinski}, {Slosar}, {Szalay}, {Thomas}, {Torki}, {Andreescu},
+  {Edmondson}, {Miller}, {Murray}, {Raddick}, \& {Vandenberg}}]{Bamford09}
+{Bamford} S.~P. {et~al.}, 2009, \mnras, 393, 1324
+
+\bibitem[{{Brammer} {et~al}\mbox{.}(2009){Brammer}, {Whitaker}, {van Dokkum},
+  {Marchesini}, {Labb{\'e}}, {Franx}, {Kriek}, {Quadri}, {Illingworth}, {Lee},
+  {Muzzin}, \& {Rudnick}}]{Brammer09}
+{Brammer} G.~B. {et~al.}, 2009, \apjl, 706, L173
+
+\bibitem[{{Croton} {et~al}\mbox{.}(2006){Croton}, {Springel}, {White}, {De
+  Lucia}, {Frenk}, {Gao}, {Jenkins}, {Kauffmann}, {Navarro}, \&
+  {Yoshida}}]{Croton06}
+{Croton} D.~J. {et~al.}, 2006, \mnras, 365, 11
+
+\bibitem[{{Darg} {et~al}\mbox{.}(2010){Darg}, {Kaviraj}, {Lintott},
+  {Schawinski}, {Sarzi}, {Bamford}, {Silk}, {Proctor}, {Andreescu}, {Murray},
+  {Nichol}, {Raddick}, {Slosar}, {Szalay}, {Thomas}, \& {Vandenberg}}]{Darg10a}
+{Darg} D.~W. {et~al.}, 2010, \mnras, 401, 1043
+
+\bibitem[{{Di Matteo} {et~al}\mbox{.}(2005){Di Matteo}, {Springel}, \&
+  {Hernquist}}]{diMatteo05}
+{Di Matteo} T., {Springel} V., {Hernquist} L., 2005, \nat, 433, 604
+
+\bibitem[{{Dressler}(1980)}]{dressler80}
+{Dressler} A., 1980, \apj, 236, 351
+
+\bibitem[{{Goodman} \& {Weare}(2010)}]{GW10}
+{Goodman} J., {Weare} J., 2010, CAMCS, 5, 65
+
+\bibitem[{{Hickox} {et~al}\mbox{.}(2009){Hickox}, {Jones}, {Forman}, {Murray},
+  {Kochanek}, {Eisenstein}, {Jannuzi}, {Dey}, {Brown}, {Stern}, {Eisenhardt},
+  {Gorjian}, {Brodwin}, {Narayan}, {Cool}, {Kenter}, {Caldwell}, \&
+  {Anderson}}]{Hickox09}
+{Hickox} R.~C. {et~al.}, 2009, \apj, 696, 891
+
+\bibitem[{{Lintott} {et~al}\mbox{.}(2011){Lintott}, {Schawinski}, {Bamford},
+  {Slosar}, {Land}, {Thomas}, {Edmondson}, {Masters}, {Nichol}, {Raddick},
+  {Szalay}, {Andreescu}, {Murray}, \& {Vandenberg}}]{Lintott11}
+{Lintott} C. {et~al.}, 2011, \mnras, 410, 166
+
+\bibitem[{{Lintott} {et~al}\mbox{.}(2009){Lintott}, {Schawinski}, {Keel}, {van
+  Arkel}, {Bennert}, {Edmondson}, {Thomas}, {Smith}, {Herbert}, {Jarvis},
+  {Virani}, {Andreescu}, {Bamford}, {Land}, {Murray}, {Nichol}, {Raddick},
+  {Slosar}, {Szalay}, \& {Vandenberg}}]{Lintott09}
+{Lintott} C.~J. {et~al.}, 2009, \mnras, 399, 129
+
+\bibitem[{{Nandra} {et~al}\mbox{.}(2007){Nandra}, {Georgakakis}, {Willmer},
+  {Cooper}, {Croton}, {Davis}, {Faber}, {Koo}, {Laird}, \& {Newman}}]{Nandra07}
+{Nandra} K. {et~al.}, 2007, \apjl, 660, L11
+
+\bibitem[{{Skibba} {et~al}\mbox{.}(2009){Skibba}, {Bamford}, {Nichol},
+  {Lintott}, {Andreescu}, {Edmondson}, {Murray}, {Raddick}, {Schawinski},
+  {Slosar}, {Szalay}, {Thomas}, \& {Vandenberg}}]{Skibba09}
+{Skibba} R.~A. {et~al.}, 2009, \mnras, 399, 966
+
+\bibitem[{{Smethurst} {et~al}\mbox{.}(2016){Smethurst}, {Lintott}, {Simmons},
+  {Schawinski}, {Bamford}, {Cardamone}, {Kruk}, {Masters}, {Urry}, {Willett},
+  \& {Wong}}]{smethurst16}
+{Smethurst} R.~J. {et~al.}, 2016, \mnras
+
+\bibitem[{{Smethurst} {et~al}\mbox{.}(2015){Smethurst}, {Lintott}, {Simmons},
+  {Schawinski}, {Marshall}, {Bamford}, {Fortson}, {Kaviraj}, {Masters},
+  {Melvin}, {Nichol}, {Skibba}, \& {Willett}}]{smethurst15}
+{Smethurst} R.~J. {et~al.}, 2015, \mnras, 450, 435
+
+\bibitem[{{Willett} {et~al}\mbox{.}(2013){Willett}, {Lintott}, {Bamford},
+  {Masters}, {Simmons}, {Casteels}, {Edmondson}, {Fortson}, {Kaviraj}, {Keel},
+  {Melvin}, {Nichol}, {Raddick}, {Schawinski}, {Simpson}, {Skibba}, {Smith}, \&
+  {Thomas}}]{GZ2}
+{Willett} K.~W. {et~al.}, 2013, \mnras, 435, 2835
+
+\end{thebibliography}

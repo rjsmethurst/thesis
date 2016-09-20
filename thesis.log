@@ -1,0 +1,689 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.1.23)  20 SEP 2016 16:36
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**thesis.tex
+(./thesis.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
+ polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
+lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
+welsh, loaded.
+(./ociamthesis.cls
+Document Class: ociamthesis 2010/11/22 v2.2 OCIAM thesis class
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/mdwtools/footnote.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box26
+\fn@width=\dimen105
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen106
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen107
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen108
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip11
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks17
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks18
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip46
+\bibsep=\skip47
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count101
+)
+
+LaTeX Warning: Unused global option(s):
+    [useAMS].
+
+(./thesis.aux (./introduction/introduction.aux) (./starpy/starpy.aux)
+(./morphology/morph.aux) (./agn/agn.aux) (./environment/environment.aux)
+(./discussion/discussion.aux) (./conclusion/conclusions.aux))
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+
+(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count102
+\scratchdimen=\dimen115
+\scratchbox=\box29
+\nofMPsegments=\count103
+\nofMParguments=\count104
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count105
+\MPscratchDim=\dimen116
+\MPnumerator=\count106
+\makeMPintoPDFobject=\count107
+\everyMPtoPDFconversion=\toks22
+) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+<oxlogo.png, id=1, 115.43124pt x 115.43124pt>
+File: oxlogo.png Graphic file (type png)
+ <use oxlogo.png>
+Package pdftex.def Info: oxlogo.png used on input line 39.
+(pdftex.def)             Requested size: 91.04881pt x 91.04877pt.
+ [1
+
+
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./oxlog
+o.png>]
+[2
+
+] [3
+
+] [4
+
+] (./thesis.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+))
+\tf@toc=\write3
+\openout3 = `thesis.toc'.
+
+ [1
+
+
+]
+(./thesis.lof
+
+LaTeX Warning: Reference `pred' on page 8 undefined on input line 4.
+
+)
+\tf@lof=\write4
+\openout4 = `thesis.lof'.
+
+ [2
+
+] [3]
+\openout2 = `introduction/introduction.aux'.
+
+ (./introduction/introduction.tex
+Chapter 1.
+
+Package natbib Warning: Citation `Baldry04' on page 1 undefined on input line 3
+.
+
+
+Package natbib Warning: Citation `Willmer06' on page 1 undefined on input line 
+3.
+
+
+Package natbib Warning: Citation `BLB08' on page 1 undefined on input line 3.
+
+
+Package natbib Warning: Citation `Chester64' on page 1 undefined on input line 
+3.
+
+
+Package natbib Warning: Citation `BLE92' on page 1 undefined on input line 3.
+
+
+Package natbib Warning: Citation `Driver06' on page 1 undefined on input line 3
+.
+
+
+Package natbib Warning: Citation `Faber07' on page 1 undefined on input line 3.
+
+
+
+Package natbib Warning: Citation `Strat01' on page 1 undefined on input line 3.
+
+
+
+Package natbib Warning: Citation `Salim07' on page 1 undefined on input line 3.
+
+
+
+Package natbib Warning: Citation `Sch07' on page 1 undefined on input line 3.
+
+
+Package natbib Warning: Citation `CHV08' on page 1 undefined on input line 3.
+
+
+Package natbib Warning: Citation `Masters10' on page 1 undefined on input line 
+3.
+
+
+Package natbib Warning: Citation `Sch09' on page 1 undefined on input line 3.
+
+
+Package natbib Warning: Citation `Arnouts07' on page 1 undefined on input line 
+5.
+
+
+Package natbib Warning: Citation `Martin07' on page 1 undefined on input line 5
+.
+
+
+Package natbib Warning: Citation `Bell04' on page 1 undefined on input line 5.
+
+
+Package natbib Warning: Citation `Wyder07' on page 1 undefined on input line 5.
+
+
+
+Package natbib Warning: Citation `Schim07' on page 1 undefined on input line 5.
+
+
+
+Package natbib Warning: Citation `Martin07' on page 1 undefined on input line 5
+.
+
+
+Package natbib Warning: Citation `Faber07' on page 1 undefined on input line 5.
+
+
+
+Package natbib Warning: Citation `Mendez11' on page 1 undefined on input line 5
+.
+
+
+Package natbib Warning: Citation `Gonc12' on page 1 undefined on input line 5.
+
+
+Package natbib Warning: Citation `Sch2014' on page 1 undefined on input line 5.
+
+
+
+Package natbib Warning: Citation `Pan14' on page 1 undefined on input line 5.
+
+
+Package natbib Warning: Citation `Salim07' on page 1 undefined on input line 8.
+
+
+
+Package natbib Warning: Citation `Noeske07' on page 1 undefined on input line 8
+.
+
+
+Package natbib Warning: Citation `Peng' on page 1 undefined on input line 8.
+
+
+Package natbib Warning: Citation `Martin07' on page 1 undefined on input line 1
+1.
+
+
+Package natbib Warning: Citation `Sch07' on page 1 undefined on input line 11.
+
+
+Package natbib Warning: Citation `Cheung12' on page 1 undefined on input line 1
+1.
+
+
+Package natbib Warning: Citation `Barro13' on page 1 undefined on input line 11
+.
+
+
+Package natbib Warning: Citation `MFB12' on page 1 undefined on input line 11.
+
+
+Package natbib Warning: Citation `Coil08' on page 1 undefined on input line 11.
+
+
+
+Package natbib Warning: Citation `Mendez11' on page 1 undefined on input line 1
+1.
+
+
+Package natbib Warning: Citation `Fang13' on page 1 undefined on input line 11.
+
+
+
+Package natbib Warning: Citation `Masters10' on page 1 undefined on input line 
+11.
+
+
+Package natbib Warning: Citation `Masters11' on page 1 undefined on input line 
+11.
+
+
+Package natbib Warning: Citation `Mendez11' on page 1 undefined on input line 1
+1.
+
+[1
+
+
+
+]
+
+Package natbib Warning: Citation `Mag98' on page 2 undefined on input line 14.
+
+
+Package natbib Warning: Citation `MH03' on page 2 undefined on input line 14.
+
+
+Package natbib Warning: Citation `HR04' on page 2 undefined on input line 14.
+
+
+Package natbib Warning: Citation `SR98' on page 2 undefined on input line 14.
+
+
+Package natbib Warning: Citation `Bower06' on page 2 undefined on input line 14
+.
+
+
+Package natbib Warning: Citation `Somer08' on page 2 undefined on input line 14
+.
+
+
+Package natbib Warning: Citation `Fab06' on page 2 undefined on input line 14.
+
+
+Package natbib Warning: Citation `CB08' on page 2 undefined on input line 16.
+
+
+Package natbib Warning: Citation `Sch2010' on page 2 undefined on input line 16
+.
+
+
+Package natbib Warning: Citation `daddi10' on page 2 undefined on input line 18
+.
+
+
+Package natbib Warning: Citation `kennicutt77' on page 2 undefined on input lin
+e 18.
+
+
+Package natbib Warning: Citation `peng12' on page 2 undefined on input line 18.
+
+
+
+Package natbib Warning: Citation `faber12' on page 2 undefined on input line 18
+.
+
+
+Package natbib Warning: Citation `?' on page 2 undefined on input line 20.
+
+
+Package natbib Warning: Citation `?' on page 2 undefined on input line 22.
+
+[2]
+
+LaTeX Warning: Reference `future' on page 3 undefined on input line 30.
+
+
+LaTeX Warning: Reference `complete' on page 3 undefined on input line 30.
+
+[3]
+
+LaTeX Warning: Reference `mosaic' on page 4 undefined on input line 36.
+
+) [4]
+\openout2 = `starpy/starpy.aux'.
+
+ (./starpy/starpy.tex
+Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+
+Package natbib Warning: Citation `Sivia' on page 5 undefined on input line 6.
+
+
+Package natbib Warning: Citation `MacKay' on page 5 undefined on input line 6.
+
+
+LaTeX Warning: Reference `class' on page 5 undefined on input line 6.
+
+
+Overfull \hbox (116.0598pt too wide) detected at line 11
+\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 d[]\OMS/cmsy/m/n/12 j\OML/c
+mm/m/it/12 ^^R[]; t[]\OT1/cmr/m/n/12 ) = [][][]  [] [][]  [] []\OML/cmm/m/it/12
+ :
+ []
+
+[5
+
+
+
+]
+<starpy/triangle_t_tau_red_s_1237655504035185152_40000_14_16_06_08_14.pdf, id=5
+5, 451.6875pt x 451.6875pt>
+File: starpy/triangle_t_tau_red_s_1237655504035185152_40000_14_16_06_08_14.pdf 
+Graphic file (type pdf)
+
+<use starpy/triangle_t_tau_red_s_1237655504035185152_40000_14_16_06_08_14.pdf>
+Package pdftex.def Info: starpy/triangle_t_tau_red_s_1237655504035185152_40000_
+14_16_06_08_14.pdf used on input line 30.
+(pdftex.def)             Requested size: 390.25534pt x 390.277pt.
+
+
+Package natbib Warning: Citation `MacKay' on page 6 undefined on input line 35.
+
+
+
+Package natbib Warning: Citation `Dan' on page 6 undefined on input line 35.
+
+
+Package natbib Warning: Citation `Dan' on page 6 undefined on input line 35.
+
+<starpy/mosaic_test.pdf, id=56, 7227.0pt x 7227.0pt>
+File: starpy/mosaic_test.pdf Graphic file (type pdf)
+
+<use starpy/mosaic_test.pdf>
+Package pdftex.def Info: starpy/mosaic_test.pdf used on input line 41.
+(pdftex.def)             Requested size: 433.62pt x 433.6013pt.
+
+
+LaTeX Warning: Reference `pred' on page 6 undefined on input line 42.
+
+
+LaTeX Warning: Reference `pred' on page 6 undefined on input line 42.
+
+
+LaTeX Warning: Reference `red_s' on page 6 undefined on input line 48.
+
+
+LaTeX Warning: Reference `green_v' on page 6 undefined on input line 48.
+
+
+LaTeX Warning: Reference `blue_c' on page 6 undefined on input line 48.
+
+[6] [7 <./starpy/triangle_t_tau_red_s_1237655504035185152_40000_14_16_06_08_14.
+pdf>] [8 <./starpy/mosaic_test.pdf>]
+<starpy/corner_test_starfpy_full_sfh_function_0.pdf, id=490, 451.71008pt x 451.
+71008pt>
+File: starpy/corner_test_starfpy_full_sfh_function_0.pdf Graphic file (type pdf
+)
+ <use starpy/corner_test_starfpy_full_sfh_function_0.pdf>
+Package pdftex.def Info: starpy/corner_test_starfpy_full_sfh_function_0.pdf use
+d on input line 53.
+(pdftex.def)             Requested size: 212.47617pt x 212.47607pt.
+
+<starpy/corner_test_starfpy_lookup_0.pdf, id=491, 451.71008pt x 451.71008pt>
+File: starpy/corner_test_starfpy_lookup_0.pdf Graphic file (type pdf)
+
+<use starpy/corner_test_starfpy_lookup_0.pdf>
+Package pdftex.def Info: starpy/corner_test_starfpy_lookup_0.pdf used on input 
+line 54.
+(pdftex.def)             Requested size: 212.47617pt x 212.47607pt.
+ [9 <./starpy/corner_test_starfpy_full_sfh_function_0.pdf> <./starpy/corner_tes
+t_starfpy_lookup_0.pdf>]
+
+LaTeX Warning: Reference `qmod' on page 10 undefined on input line 91.
+
+[10] <starpy/discarded_galaxy_colour_colour.pdf, id=518, 867.24pt x 578.16pt>
+File: starpy/discarded_galaxy_colour_colour.pdf Graphic file (type pdf)
+
+<use starpy/discarded_galaxy_colour_colour.pdf>
+Package pdftex.def Info: starpy/discarded_galaxy_colour_colour.pdf used on inpu
+t line 96.
+(pdftex.def)             Requested size: 390.25534pt x 260.16959pt.
+) [11] [12 <./starpy/discarded_galaxy_colour_colour.pdf>]
+\openout2 = `morphology/morph.aux'.
+
+ (./morphology/morph.tex
+Chapter 3.
+) [13
+
+
+
+]
+\openout2 = `agn/agn.aux'.
+
+ (./agn/agn.tex
+Chapter 4.
+) [14
+
+
+
+]
+\openout2 = `environment/environment.aux'.
+
+ (./environment/environment.tex
+Chapter 5.
+) [15
+
+
+
+]
+\openout2 = `discussion/discussion.aux'.
+
+ (./discussion/discussion.tex
+Chapter 6.
+) [16
+
+
+
+]
+\openout2 = `conclusion/conclusions.aux'.
+
+ (./conclusion/conclusions.tex
+Chapter 7.
+) [17
+
+
+
+] (./thesis.bbl)
+
+Package natbib Warning: There were undefined citations.
+
+[18
+
+
+] (./thesis.aux (./introduction/introduction.aux) (./starpy/starpy.aux)
+(./morphology/morph.aux) (./agn/agn.aux) (./environment/environment.aux)
+(./discussion/discussion.aux) (./conclusion/conclusions.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3201 strings out of 493488
+ 42293 string characters out of 3141326
+ 105618 words of memory out of 3000000
+ 6392 multiletter control sequences out of 15000+200000
+ 13570 words of font info for 52 fonts, out of 3000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 38i,13n,26p,1569b,269s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
+ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
+l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
+ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texli
+ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on thesis.pdf (25 pages, 20804195 bytes).
+PDF statistics:
+ 658 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+
