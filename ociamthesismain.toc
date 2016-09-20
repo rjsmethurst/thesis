@@ -1,9 +1,0 @@
-\contentsline {chapter}{\numberline {1}Introduction}{1}
-\contentsline {chapter}{\numberline {2}Starpy}{2}
-\contentsline {chapter}{\numberline {3}Green Valley}{3}
-\contentsline {chapter}{\numberline {4}AGN}{4}
-\contentsline {section}{\numberline {4.1}Bulgeless galaxies}{4}
-\contentsline {chapter}{\numberline {5}Environment}{5}
-\contentsline {chapter}{\numberline {6}Discussion}{6}
-\contentsline {chapter}{\numberline {7}Conclusions}{7}
-\contentsline {chapter}{Bibliography}{7}
