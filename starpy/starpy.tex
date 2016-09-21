@@ -3,7 +3,55 @@
 \emph{The work in the following chapter has been published in \citet{smethurst15}.}
 \\
 
-In order to achieve robust conclusions we conduct a Bayesian analysis \citep{Sivia, MacKay} of our SFH models in comparison to the observed GZ2 sample data. This approach requires consideration of all possible combinations of $\theta \equiv (t_{q}, \tau)$. Assuming that all galaxies formed at $t=0~\rm{Gyr}$ with an initial burst of star formation, we can assume that the `age' of each galaxy in the GZ2 sample is equivalent to an observed time, $t^{obs}_{k}$ (see Section~\ref{class}). We then use this  `age' to calculate the predicted model colours at this cosmic time for a given combination of $\theta$: $d_{c,p}(\theta_k, t^{obs}_{k})$ for both optical and NUV $(c={opt,NUV})$ colours. We can now directly compare our model colours with the observed GZ2 galaxy colours, so that for a single galaxy $k$ with optical ($u-r$) colour, $d_{opt, k}$ and NUV ($NUV-u$) colour, $d_{NUV,k}$, the likelihood $P(d_{k}|\theta_k, t^{obs}_{k})$ is:
+\section{Star Formation History Models}\label{qmod}
+
+ \begin{figure}
+\centering{
+\includegraphics[height=0.8\textheight]{starpy/colours.pdf}}
+\caption[Predicted colours and SFRs of quenching models]{Quenching timescale $\tau$ versus quenching onset time $t$ in all three panels for the quenched SFH models used in ~\starpy. Colour shadings show model predictions of the $u-r$ optical colour (top panel), $NUV-u$ colour (middle panel), and star formation rate in $M_\odot \rm{~yr}^{-1}$ (lower panel), at $t^{obs} = 12.8~\rm{Gyr}$, the mean observed redshift of the GZ2 sample (see Section \ref{qmod}). The combination of optical and NUV colours is a sensitive measure of the $\theta = [t_q, \tau]$ parameter space. Note that all models with $t > 12.8$ \rm{Gyr} are effectively un-quenched. The `kink' in the bottom panel is due to the assumption that the sSFR is constant prior to $t \sim 3~\rm{Gyr}$ ($z\sim 2.2$).}
+\label{pred}
+\end{figure}
+
+The quenched star formation history (SFH) of a galaxy can be simply modelled as an exponentially declining star formation rate (SFR) across cosmic time ($0 \leq t ~\rm{[Gyr]} \leq 13.8$) as:
+\begin{equation}\label{sfh}
+SFR =
+\begin{cases}
+i_{sfr}(t_q) & \text{if } t < t_q \\
+i_{sfr}(t_q) \times exp{\left( \frac{-(t-t_{q})}{\tau}\right)} & \text{if } t > t_q 
+\end{cases}
+\end{equation}
+where $t_{q}$ is the onset time of quenching, $\tau$ is the timescale over which the quenching occurs and $i_{sfr}$ is an initial constant star formation rate dependent on $t_q$.  A smaller $\tau$ value corresponds to a rapid quench, whereas a larger $\tau$ value corresponds to a slower quench. 
+
+We assume that all galaxies formed at a time $t=0~\rm{Gyr}$ with an initial burst of star formation. The mass of this initial burst is controlled by the value of the $i_{sfr}$ which is set as the average specific SFR (sSFR) at the time of quenching $t_q$.  \citet{peng10} defined a relation (their equation 1) between the average sSFR and redshift (cosmic time, $t$) by fitting to measurements of the mean sSFR of blue star forming galaxies from SDSS, zCOSMOS and literature values at increasing redshifts \citep{Elbaz07, Daddi07}:
+\begin{equation}
+sSFR(m,t) = 2.5 \left( \frac{m}{10^{10} M_{\odot}} \right)^{-0.1} \left(\frac{t}{3.5 ~\rm{Gyr}}\right)^{-2.2} \rm{Gyr}^{-1}.
+\end{equation}
+Beyond $z \sim 2$ the characteristic SFR flattens and is roughly constant back to $z\sim6$. The cause for this change is not well understood but can be seen across similar observational data \citep{peng10, gonzalez10, bethermin12}. Motivated by these observations, the relation defined in \citet{peng10} is taken up to a cosmic time of $t=3~\rm{Gyr}~(z \sim 2.3)$ and prior to this a constant average SFR is assumed (see Figure~\ref{sfr_mass_col}). At the point of quenching, $t_{q}$, the models are defined to have a SFR which lies on this relationship for the sSFR, for a galaxy with mass, $m = 10^{10.27} M_{\odot}$ (the mean mass of the GZ2 sample; see Section~\ref{results} and Figure~\ref{sfr_mass_col}).
+
+\begin{figure*}
+\centering{
+\includegraphics[width=\textwidth]{starpy/sfr_mass_colour_diagram.pdf}}
+\caption[SFH models in observational planes]{Left panel: SFR vs. $M_*$ for all 126,316 galaxies in our full sample (shaded contours), with model galaxy trajectories shown as coloured points/lines with each point representing a time step of $0.5~\rm{Gyr}$. The SFHs of the models are shown in the middle panel, where the SFR is initially constant before quenching at time $t$ and thereafter exponentially declining with a characteristic timescale $\tau$. We set the SFR at the point of quenching to be consistent with the typical SFR of a star-forming galaxy at the quenching time, $t$ (dashed line; \citealt{peng10}). The full range of models reproduces the observed colour-colour properties of the sample (right panel); for clarity the figures show only 4 of the possible models explored in this study. Note that some of the model tracks produce colours redder than the apparent peak of the red sequence in the GZ2 subsample; however this is not the \emph{true} peak of the red sequence due to the necessity for NUV colours from GALEX.}
+\label{sfr_mass_col}
+\end{figure*}
+  
+Under these assumptions the average SFR of our models will result in a lower value than the relation defined in \citet{peng10} at all cosmic times; each galaxy only resides on the `main sequence' at the point of quenching. However galaxies cannot remain on the `main sequence' from early to late times throughout their entire lifetimes given the unphysical stellar masses and SFRs this would result in at the current epoch in the local Universe \citep{bethermin12, Heinis14}. If we were to include prescriptions for no quenching, starbursts, mergers, AGN etc. into our models we would improve on our reproduction of the average SFR across cosmic time; however we chose to initially focus on the simplest model possible.
+
+Once this evolutionary SFR is obtained, it is convolved with the \citet{BC03} population synthesis models to generate a model SED at each time step. The observed features of galaxy spectra can be modelled using simple stellar population techniques which sum the contributions of individual, coeval, equal-metallicity stars. The accuracy of these predictions depends on the completeness of the input stellar physics. Comprehensive knowledge is therefore required of (i) stellar evolutionary tracks and (ii) the initial mass function (IMF) to synthesise a stellar population accurately. 
+
+These stellar population synthesis (SPS) models are an extremely well explored (and often debated) area of astrophysics \citep{Maraston05, Eminian08, CGW09, falkenberg09, Chen10, Kriek10, miner11, melbourne12}. In this investigation we chose to utilise the \citet{BC03} \emph{GALEXEV} SPS models, to allow a direct comparison with S14, along with a Chabrier \citep{chabrier03} IMF, across a large wavelength range ($0.0091 < ~\lambda~\rm{[\mu m]}~ < 160 $) with solar metallically (m62 in the \citet{BC03} models; hereafter BC03).
+
+
+Fluxes from stars younger than $3~$Myr in the SPS model are suppressed to mimic the large optical depth of protostars embedded in dusty formation cloud (as in S14), then filter transmission curves are applied to the fluxes to obtain AB magnitudes and therefore colours.  For a particular galaxy at an observed redshift, $z$, we define the observed time, $t^{obs}$ for that galaxy using the standard cosmological conversion between redshift and time. We utilise the SFH models at this observed time for each individual galaxy to compare the predicted model and observed colours directly.
+
+
+Figure~\ref{pred} shows these predicted optical and NUV colours at a time of $t^{obs} = 12.8 ~\rm{Gyr}$ (the average observed time of the Galaxy Zoo 2 sample, $z \sim 0.076$) provided by the exponential SFH model. These predicted colours will be referred to as $d_{c,p}(t_{q}, \tau, t^{obs})$, where c=\{opt,NUV\} and p = predicted. The SFR at a time of $t^{obs}=12.8~\rm{Gyr}$ is also shown in Figure~\ref{pred} to compare how this correlates with the predicted colours. The $u-r$ predicted colour shows an immediate correlation with the SFR, however the $NUV-u$ colour is more sensitive to the value of $\tau$ and so is ideal for tracing any recent star formation in a population . At small $\tau$ (rapid quenching timescales) the $NUV-u$ colour is insensitive to $t_{q}$, whereas at large $\tau$ (slow quenching timescales) the colour is very sensitive to $t_{q}$. Together the two colours are ideal for tracing the effects of $t_{q}$ and $\tau$ in a population. 
+
+We stress here that this model is not a fully hydrodynamical simulation, it is a simple model built in order to test the understanding of the evolution of galaxy populations. These models are therefore not expected to accurately determine the SFH of every galaxy in the GZ2 sample, in particular galaxies which have not undergone any quenching. In this case the models described above can only attribute a constant star formation rate to these  unquenched galaxies. In reality, there are many possible forms of SFH that a galaxy can take, a few of which have been investigated in previous literature; starbursts \citep{Canalizo01}, a power law \citep{Glazebrook03}, single stellar populations \citep{Trager00, Sanchez06, Vazdekis10} and metallicity enrichment \citep{deLucia14}. Incorporating these different SFHs along with prescriptions for mergers and a reinvigoration of star formation post quench into our models is a possible future extension to this work once the results of this initial study are well enough understood to permit additional complexity to be added.
+
+\section{Probabilistic Fitting Methods}
+
+In order to achieve robust conclusions we conduct a Bayesian analysis \citep{Sivia, mackay03} of our SFH models in comparison to the observed GZ2 sample data. This approach requires consideration of all possible combinations of $\theta \equiv (t_{q}, \tau)$. Assuming that all galaxies formed at $t=0~\rm{Gyr}$ with an initial burst of star formation, we can assume that the `age' of each galaxy in the GZ2 sample is equivalent to an observed time, $t^{obs}_{k}$. We then use this  `age' to calculate the predicted model colours at this cosmic time for a given combination of $\theta$: $d_{c,p}(\theta_k, t^{obs}_{k})$ for both optical and NUV $(c={opt,NUV})$ colours. We can now directly compare our model colours with the observed GZ2 galaxy colours, so that for a single galaxy $k$ with optical ($u-r$) colour, $d_{opt, k}$ and NUV ($NUV-u$) colour, $d_{NUV,k}$, the likelihood $P(d_{k}|\theta_k, t^{obs}_{k})$ is:
 
 
 \begin{equation}\label{like}
@@ -28,18 +76,18 @@ P(\theta_k) =
 \centering{
 \includegraphics[width=0.9\textwidth]
 {starpy/triangle_t_tau_red_s_1237655504035185152_40000_14_16_06_08_14.pdf}
-\caption{Example output from \starpy ~for a galaxy within the red sequence. The contours show the positions of the `walkers' in the Markov Chain (which are analogous to the areas of high probability) for the quenching models described by $\theta = [t_q, \tau]$ and the histograms show the 1D projection along each axis. Solid (dashed) blue lines show the best fit model (with $\pm 1\sigma$) to the galaxy data. The postage stamp image from SDSS is shown in the top right along with the debiased vote fractions for smooth ($p_s$) and disc ($p_d$) from Galaxy Zoo 2.} }
+\caption[Example \starpy ~output]{Example output from \starpy ~for a galaxy within the red sequence. The contours show the positions of the `walkers' in the Markov Chain (which are analogous to the areas of high probability) for the quenching models described by $\theta = [t_q, \tau]$ and the histograms show the 1D projection along each axis. Solid (dashed) blue lines show the best fit model (with $\pm 1\sigma$) to the galaxy data. The postage stamp image from SDSS is shown in the top right along with the debiased vote fractions for smooth ($p_s$) and disc ($p_d$) from Galaxy Zoo 2.} }
 \label{one_example}
 \end{figure}
 
-As the denominator of Equation~\ref{big} is a normalisation factor, comparison between likelihoods for two different SFH models (i.e., two different combinations of $\theta_k = [t_q, \tau]$) is equivalent to a comparison of the numerators. Calculation of $P(\theta_k|d_k, t^{obs})$  for any $\theta$ is possible given galaxy data from the GZ2 sample. Markov Chain Monte Carlo (MCMC; \citealt{MacKay, Dan, GW10}) provides a robust comparison of the likelihoods between $\theta$ values; here we choose \emph{emcee},\footnote{\url{dan.iel.fm/emcee/}} a Python implementation of an affine invariant ensemble sampler by \cite{Dan}.
+As the denominator of Equation~\ref{big} is a normalisation factor, comparison between likelihoods for two different SFH models (i.e., two different combinations of $\theta_k = [t_q, \tau]$) is equivalent to a comparison of the numerators. Calculation of $P(\theta_k|d_k, t^{obs})$  for any $\theta$ is possible given galaxy data from the GZ2 sample. Markov Chain Monte Carlo (MCMC; \citealt{mackay03, emcee13, GW10}) provides a robust comparison of the likelihoods between $\theta$ values; here we choose \emph{emcee},\footnote{\url{emcee13.iel.fm/emcee/}} a Python implementation of an affine invariant ensemble sampler by \cite{emcee13}.
 
 This method allows for a more efficient exploration of the parameter space by avoiding those areas with low likelihood. A large number of `walkers' are started at an initial position where the likelihood is calculated; from there they individually `jump' to a new area of parameter space. If the likelihood in this new area is greater (less) than the original position then the `walkers' accept (reject) this change in position. Any new position then influences the direction of the  `jumps' of other walkers. This is repeated for the defined number of steps after an initial `burn-in' phase. \emph{emcee} returns the positions of these `walkers', which are analogous to the regions of high probability in the model parameter space. The model outlined above has been coded using the \emph{Python} programming language into a package named \starpy ~which has been made freely available to download\footnote{\url{github.com/zooniverse/starpy}}. An example output from this Python package for a single galaxy from the GZ2 sample in the red sequence is shown in Figure~\ref{one_example}. The contours show the positions of the `walkers' in the Markov Chain which are analogous to the areas of high probability.
 
 \begin{figure}
 \centering{
 \includegraphics[width=\textwidth]{starpy/mosaic_test.pdf}}
-\caption{Results from \starpy ~for an array of synthesised galaxies with known, i.e. \underline{true}, $t_q$ and $\tau$ values (marked by the red lines) using the complete function to calculate the predicted colour of a proposed set of $\theta$ values in each MCMC iteration, assuming an error on the calculated known colours of $\sigma_{u-r} = 0.124$ and $\sigma_{NUV-u} = 0.215$, the average errors on the GZ sample colours. In each case \starpy ~succeeds in locating the true parameter values within the degeneracies of the star formation history model. These degeneracies can clearly be seen in Figure~\ref{pred}.}
+\caption[Testing \starpy]{Results from \starpy ~for an array of synthesised galaxies with known, i.e. \underline{true}, $t_q$ and $\tau$ values (marked by the red lines) using the complete function to calculate the predicted colour of a proposed set of $\theta$ values in each MCMC iteration, assuming an error on the calculated known colours of $\sigma_{u-r} = 0.124$ and $\sigma_{NUV-u} = 0.215$, the average errors on the GZ sample colours. In each case \starpy ~succeeds in locating the true parameter values within the degeneracies of the star formation history model.}
 \label{test_mosaic}
 \end{figure}
 
@@ -52,7 +100,7 @@ We find peaks in the histograms across all areas of the parameter space in both 
 \centering{
 \includegraphics[width=0.49\textwidth]{starpy/corner_test_starfpy_full_sfh_function_0.pdf}
 \includegraphics[width=0.49\textwidth]{starpy/corner_test_starfpy_lookup_0.pdf}}
-\caption{Left panel: Results from \starpy ~for \underline{true} $t_q$ and $\tau$ values (red lines) using the complete function to calculate the predicted colour of a proposed set of $\theta$ values in each MCMC iteration. The median walker position (the 50th percentile of the Bayesian probability distribution) is shown by the solid blue line with the dashed lines encompassing $68\% (\pm 1\sigma)$ of the samples (the 16th and 84th percentile positions). The time taken to run for a single galaxy using this method is approximately 2 hours. Right panel: Results from \starpy ~for \underline{true} $t_q$ and $\tau$ values using a look up table generated from the complete function to calculate the predicted colour of a proposed set of $\theta$ values in each MCMC iteration. The time taken to run for a single galaxy using this method is approximately 2 minutes.}
+\caption[Comparing complete and look-up table versions of \starpy]{Left panel: Results from \starpy ~for \underline{true} $t_q$ and $\tau$ values (red lines) using the complete function to calculate the predicted colour of a proposed set of $\theta$ values in each MCMC iteration. The median walker position (the 50th percentile of the Bayesian probability distribution) is shown by the solid blue line with the dashed lines encompassing $68\% (\pm 1\sigma)$ of the samples (the 16th and 84th percentile positions). The time taken to run for a single galaxy using this method is approximately 2 hours. Right panel: Results from \starpy ~for \underline{true} $t_q$ and $\tau$ values using a look up table generated from the complete function to calculate the predicted colour of a proposed set of $\theta$ values in each MCMC iteration. The time taken to run for a single galaxy using this method is approximately 2 minutes.}
 \label{lookup}
 \end{figure*}
 
@@ -94,7 +142,7 @@ This is not a significant fraction of either population, therefore this shows th
 
 \begin{figure}
 \includegraphics[width=0.9\textwidth]{starpy/discarded_galaxy_colour_colour.pdf}
-\caption{Contours show the full GZ2 subsample optical-NUV colour-colour diagram. The points show the positions of the galaxies which had all (top panels) or more than half (bottom panel) of their walker positions discarded due to their low probability for the red sequence (left), green valley (middle) and blue cloud (right).}
+\caption[Colours of discarded galaxies]{Contours show the full GZ2 subsample optical-NUV colour-colour diagram. The points show the positions of the galaxies which had all (top panels) or more than half (bottom panel) of their walker positions discarded due to their low probability for the red sequence (left), green valley (middle) and blue cloud (right).}
 \label{discarded}
 \end{figure}
 
