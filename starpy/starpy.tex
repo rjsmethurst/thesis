@@ -7,7 +7,7 @@
 
  \begin{figure}
 \centering{
-\includegraphics[height=0.8\textheight]{starpy/colours.pdf}}
+\includegraphics[height=0.75\textheight]{starpy/colours.pdf}}
 \caption[Predicted colours and SFRs of quenching models]{Quenching timescale $\tau$ versus quenching onset time $t$ in all three panels for the quenched SFH models used in ~\starpy. Colour shadings show model predictions of the $u-r$ optical colour (top panel), $NUV-u$ colour (middle panel), and star formation rate in $M_\odot \rm{~yr}^{-1}$ (lower panel), at $t^{obs} = 12.8~\rm{Gyr}$, the mean observed redshift of the GZ2 sample (see Section \ref{qmod}). The combination of optical and NUV colours is a sensitive measure of the $\theta = [t_q, \tau]$ parameter space. Note that all models with $t > 12.8$ \rm{Gyr} are effectively un-quenched. The `kink' in the bottom panel is due to the assumption that the sSFR is constant prior to $t \sim 3~\rm{Gyr}$ ($z\sim 2.2$).}
 \label{pred}
 \end{figure}
@@ -49,7 +49,7 @@ Figure~\ref{pred} shows these predicted optical and NUV colours at a time of $t^
 
 We stress here that this model is not a fully hydrodynamical simulation, it is a simple model built in order to test the understanding of the evolution of galaxy populations. These models are therefore not expected to accurately determine the SFH of every galaxy in the GZ2 sample, in particular galaxies which have not undergone any quenching. In this case the models described above can only attribute a constant star formation rate to these  unquenched galaxies. In reality, there are many possible forms of SFH that a galaxy can take, a few of which have been investigated in previous literature; starbursts \citep{Canalizo01}, a power law \citep{Glazebrook03}, single stellar populations \citep{Trager00, Sanchez06, Vazdekis10} and metallicity enrichment \citep{deLucia14}. Incorporating these different SFHs along with prescriptions for mergers and a reinvigoration of star formation post quench into our models is a possible future extension to this work once the results of this initial study are well enough understood to permit additional complexity to be added.
 
-\section{Probabilistic Fitting Methods}
+\section{Probabilistic Fitting Methods}\label{stats}
 
 In order to achieve robust conclusions we conduct a Bayesian analysis \citep{Sivia, mackay03} of our SFH models in comparison to the observed GZ2 sample data. This approach requires consideration of all possible combinations of $\theta \equiv (t_{q}, \tau)$. Assuming that all galaxies formed at $t=0~\rm{Gyr}$ with an initial burst of star formation, we can assume that the `age' of each galaxy in the GZ2 sample is equivalent to an observed time, $t^{obs}_{k}$. We then use this  `age' to calculate the predicted model colours at this cosmic time for a given combination of $\theta$: $d_{c,p}(\theta_k, t^{obs}_{k})$ for both optical and NUV $(c={opt,NUV})$ colours. We can now directly compare our model colours with the observed GZ2 galaxy colours, so that for a single galaxy $k$ with optical ($u-r$) colour, $d_{opt, k}$ and NUV ($NUV-u$) colour, $d_{NUV,k}$, the likelihood $P(d_{k}|\theta_k, t^{obs}_{k})$ is:
 
@@ -93,7 +93,7 @@ This method allows for a more efficient exploration of the parameter space by av
 
 In order to test that \starpy ~can find the correct quenching model for a given observed colour, 25 synthesised galaxies were created with known SFHs (i.e. known values of $\theta$) from which optical and NUV colours were generated. These were input into \starpy ~ to ensure that the known values of $\theta$ were reproduced, within error, for each of the 25 synthesised galaxies. Figure~\ref{test_mosaic} shows the results for each of these 25 synthesised galaxies, with the known values of $\theta$ shown by the red lines. In some cases this red line does not coincide with the peak of the distribution shown in the histograms for one parameter, however in all cases the intersection of the red lines is within the sample contours. 
 
-We find peaks in the histograms across all areas of the parameter space in both dimensions of $[t, \tau]$, this ensures that the results presented in Figures~\ref{red_s},~\ref{green_v} \&~\ref{blue_c} arise due to a superposition of extended probability distributions, as opposed to a bimodal distribution of probability distributions across all galaxies.
+We find peaks in the histograms across all areas of the parameter space in both dimensions of $[t, \tau]$, ensuring that any conclusions drawn from these distributions are due to a superposition of extended probability distributions, as opposed to a bimodal distribution of probability distributions across all galaxies.
 
 
 \begin{figure*}
@@ -151,3 +151,86 @@ This is not a significant fraction of either population, therefore this shows th
 The Markov Chain positions are then binned and weighted by their corresponding logarithmic posterior probability $\log [P(\theta_k|d_k)]$, provided by the \emph{emcee} package, to further emphasise the features and differences between each population in the visualisation. The GZ2 data also provides uniquely powerful continuous measurements of a galaxy's morphology, therefore we utilise the user vote fractions to obtain separate model parameter distributions for both smooth and disc galaxies. This is obtained by also weighting by the morphology vote fraction when the binned positions are summed. We stress that this portion of the methodology is a non-Bayesian visualisation of the combined individual galaxy results for each population.
 
 For example, the galaxy shown in Figure~\ref{one_example} would contribute almost evenly to both the smooth and disc parameters due to the GZ2 vote fractions. Since galaxies with similar vote fractions contain both a bulge and disc component, this method is effective in incorporating intermediate galaxies which are thought to be crucial to the morphological changes between early- and late-type galaxies. It was the consideration of these intermediate galaxies which was excluded from the investigation by S14.
+
+\subsection{Alternative Hierarchical Bayesian approach}\label{althyper}
+
+The approach presented above relies upon a visualisation of the SFHs across each population, with no inference involved beyond the use of \textsc{starpy} to derive the individual galaxy SFHs. The preferred approach to this problem would be to use a hierarchical Bayesian method to determine the `hyper-parameters' that describe the distribution of the parent population $\theta' = [t_q', \tau']$ that each individual galaxy's SFH is drawn from. 
+
+We want the posterior PDF for $\vec{\theta}'$ to describe a galaxy population:
+\begin{equation}\label{hyper}
+P(\vec{\theta}'|\vec{d}) = \frac{P(\vec{d}|\vec{\theta}')P(\vec{\theta}')}{P(\vec{d})}, 
+\end{equation}
+where $\vec{d}$ represents all of the optical and NUV colour data in a population $\{\vec{d}_k\}$. For one galaxy, $k$, the marginalised likelihood is:
+\begin{equation}\label{one}
+P(d_k|\vec{\theta}') = \iint \! P(d_k|t_k, \tau_k) P(t_k, \tau_k|\vec{\theta}') \ \mathrm{d}t_k ~ \mathrm{d}\tau_k
+\end{equation}
+and for all galaxies, $N$, therefore: 
+\begin{equation}
+P(\vec{d}|\vec{\theta}') = \prod_k^N P(d_k|\vec{\theta}').
+\end{equation}
+
+Using \textsc{starpy}~ for individual galaxies we sample from the `interim' posterior $P(t_k, \tau_k|d_k)$ which we can relate to $P(d_k|t_k, \tau_k)$  so that:
+
+\begin{equation}\label{marg}
+P(d_k|\vec{\theta}') = \iint  \! P(t_k, \tau_k|d_k) . P(d_k) . \frac{P(t_k, \tau_k|\vec{\theta}')}{P(t_k, \tau_k)} \ \mathrm{d}t_k ~ \mathrm{d}\tau_k.
+\end{equation}
+In order to calculate this we draw $N_s$ random samples, $r$, from the interim posterior, $P(t_k, \tau_k|d_k)$ so that Equation \ref{marg} can be expressed as a sum over a number of random samples, $N_s$ (as with the calculation of an expected mean):
+\begin{equation}\label{imp}
+P(d_k|\vec{\theta}') = \frac{P(d_k)}{N_s} \sum_r^{N_s} \frac{P(t_{k,r}, \tau_{k,r}|\vec{\theta}')}{P(t_k, \tau_k)},
+\end{equation}
+for the $r^{th}$ sample of $N_s$ total samples taken from one galaxy's, $k$,  interim posterior PDF. This fraction is known as the `importance weight', $w_r$, in importance sampling. 
+
+However, we also have two morphological vote fractions that we can weight by to determine separate hyper-parameters, $\vec{\theta}' = [\vec{\theta}'_d, \vec{\theta}'_s]$, for both disc, $d$, and smooth, $s$, galaxies. Therefore:
+
+\begin{equation}\label{morphimp}
+w_r = \frac{P(t_{k,r}, \tau_{k,r}|\vec{\theta}')}{P(t_k, \tau_k)} =  \frac{p_{d,k} P(t_{k,r}, \tau_{k,r}|\vec{\theta}'_d) + p_{s,k} P(t_{k,r}, \tau_{k,r}|\vec{\theta}'_s)}{P(t_k, \tau_k)}
+\end{equation} 
+
+If we substitute equation \ref{imp} into equation \ref{hyper} we find that the $P(d_k)$ terms cancel and we are left with:
+\begin{equation}
+P(\vec{\theta}'|\vec{d}) = P(\vec{\theta}')~\prod_k^N \frac{1}{N_{s,k}} \sum_r^{N_s} w_r ,
+\end{equation}
+where $P(\vec{\theta}')$ is the assumed prior on the hyper-parameters, which is assumed to be uniform.
+
+This approach is heavily dependent on what shape is assumed for the hyper-distribution; a decision which is not trivial. It is often common for this function to take the form of a multi-component Gaussian mixture model \citep{mackay03, lahav00}. For example a two component Gaussian mixture model in $[t, \tau]$ space is described by eight hyper-parameters for a single morphology, $\vec{\theta}' = [\mu_{t,1}, \sigma_{t,1}, \mu_{\tau,1}, \sigma_{\tau,1}, \mu_{t,2}, \sigma_{t,2}, \mu_{\tau,2}, \sigma_{\tau,2}]$. Here we also assume no covariance between hyper-parameters for simplicity. 
+
+We used this assumption of a two component Gaussian mixture model, to infer the population parameters for both the \textsc{agn-host} and \textsc{inactive} populations and the results are shown in Figure~\ref{method3}. These results were produced by drawing $N_s = 100$ random samples from each galaxy, $k$, in each mass bin. We plot the distributions for a given morphology by taking the median value of the posterior distribution for each of the 8 parameters describing the two component Gaussian mixture. We can see in Figure~\ref{method3} that this hierarchical method produces similar distributions for the \textsc{agn-host} and \textsc{inactive} samples. This finding is not expected given the differences between the two samples in colour-colour space seen in Figure~\ref{colcol}. 
+
+%\begin{figure}
+%\includegraphics[width=0.48\textwidth]{figc1a.pdf}
+%\includegraphics[width=0.48\textwidth]{figc1b.pdf}
+%\caption[8pt]{Hierarchical-posterior PDF of the quenching time ($t_q'$, top) and rate ($\tau'$, bottom) population parameters, normalised so that the areas under the curves are equal. \textsc{agn-host} (left) and \textsc{inactive} (right) galaxies are split into low (top), medium (middle) and high (bottom) mass, weighted for smooth (red dashed) and disc (blue solid) galaxies. A low (high) value of $t_q'$ corresponds to the early (recent) Universe. A small (large) value of $\tau'$ corresponds to a rapid (slow) quench.}
+%\label{method3}
+%\end{figure}
+
+In order to test whether this assumption of a multi-component Gaussian mixture model is appropriate, we sampled the inferred hierarchical distributions to produce replica datasets in optical-NUV colour space. These are shown here in Figure~\ref{replica}  in comparison to the observed colour-colour distributions of the \textsc{agn-host} and \textsc{inactive} samples. For all masses and morphologies the replicated $u-r$ and $NUV-u$ colours do not accurately match the observed data. 
+
+%\begin{figure}
+%\begin{centering}
+%\includegraphics[width=0.42\textwidth]{figc2a.pdf}
+%\includegraphics[width=0.42\textwidth]{figc2b.pdf}
+%\caption[8pt]{Optical-NUV colour-colour diagrams for the \textsc{agn-host} (top) and \textsc{inactive} (bottom) galaxies shown by the black contours, split into low mass (top), medium mass (middle) and high mass (bottom) galaxies weighted by $p_d$ (left) and $p_s$ (right). Kernel smoothing has been applied to the overlaid replica datasets, which are created by sampling from the \textbf{inferred 2 component Gaussian mixture model hierarchical parent distributions}, shown here in Figure~\ref{method3}. Gaussian random noise is also added to the inferred colours, with a mean and standard deviation of the errors on the observed colours of the respective sample. Contours are shown for samples taken from the disc (blue) and smooth weighted (red) inferred hierarchical distributions.
+%}
+%\label{replica}
+%\end{centering}
+%\end{figure}
+%
+%\begin{figure}
+%\begin{centering}
+%\includegraphics[width=0.42\textwidth]{figc3a.pdf}
+%\includegraphics[width=0.42\textwidth]{figc3b.pdf}
+%\caption[8pt]{Optical-NUV colour-colour diagrams for the \textsc{agn-host} (top) and \textsc{inactive} (bottom) galaxies shown by the black contours, split into low mass (top), medium mass (middle) and high mass (bottom) galaxies weighted by $p_d$ (left) and $p_s$ (right). Kernel smoothing has been applied to the overlaid replica datasets, which are created by sampling from the \textbf{unweighted summed visualisation distributions} presented in Figures~\ref{time} and \ref{rate}. Gaussian random noise is also added to the inferred colours, with a mean and standard deviation of the errors on the observed colours of the respective sample. Contours are shown for samples taken from the disc (blue) and smooth weighted (red) summed visualisation distributions.
+%}
+%\label{replicapop}
+%\end{centering}
+%\end{figure}
+
+We also varied the value of $N_s$ and found that increasing the number of samples drawn did not improve this fit for either the \textsc{agn-host} or \textsc{inactive} populations. Similarly increasing the number of components in the Gaussian mixture model did not immediately improve the accuracy of the fit.  We therefore concluded that this functional form of the population distribution was unsatisfactory. %An extensive exploration of a wide variety of functional forms is necessary to ensure the correct conclusions are drawn from the data. Such an investigation is beyond the scope of this paper. 
+
+The approach described in section \ref{stats} and applied throughout the rest of this work was motivated by the investigation increasing the number of samples, $N_s$ drawn from the posterior of each galaxy, k, until the point where all the samples were drawn. Instead of attempting to infer parameters to describe this distribution, as above, we presented the distribution itself.  The distributions produced by this visualisation method, shown in Figures~\ref{time} and \ref{rate}, reveal the complexity that the parent distribution must describe which, as we concluded earlier, cannot be effectively modelled.
+
+We also tested whether this method is reasonable by producing replica datasets in optical-NUV colour space, as before, by drawing $1000$ $[t, \tau]$ values from the unweighted summed distributions presented in Figures~\ref{time} and \ref{rate}. These replica datasets are shown here in Figure~\ref{replicapop} in comparison to the observed colour-colour distributions of the \textsc{agn-host} and \textsc{inactive} samples. Comparing these replica colours in Figure~\ref{replicapop}, with those produced by drawing from the inferred hierarchical distributions, shown in Figure~\ref{replica}, we can see that they produce a more accurate match to the observed data for the majority of masses and morphologies. 
+
+We therefore use this visualisation method to display the parent population distribution, rather than quoting inferred values to describe it.
+
+
