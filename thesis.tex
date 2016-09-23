@@ -4,8 +4,72 @@
 
 %load any additional packages
 \usepackage{amssymb}
-\usepackage{footnote, url, amsmath}
+\usepackage{footnote, url, amsmath, color}
 \usepackage{natbib}
+\usepackage{multirow}
+\usepackage{tabularx}
+
+\definecolor{titlecol}{rgb}{0,0,1}
+\definecolor{titlecol2}{rgb}{0,0.65,0}
+\definecolor{titlecol3}{rgb}{0.99,0.4,0.}
+
+%\definecolor{titledark}{rgb}{0,0,0.8}
+%\definecolor{hilit}{rgb}{0,0,1}
+%\definecolor{hilitdark}{rgb}{0,0,0.8}
+%\font\sbf=cmssbx10 at 32.28pt %big font for headers
+
+\font\nbf=cmssbx10 at 12.28pt %big font for headers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% If you want to leave notes in the text feel free to define
+%%%% your own colour above and a style below
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\note		{\color{titlecol2} \nbf}
+\def\noteb		{\color{titlecol} \nbf}
+\def\notebsm	{\color{titlecol}}
+\def\notecjl	{\color{titlecol2} \nbf}
+\def\notecsm	{\color{titlecol2}}
+\def\noterjs	{\color{titlecol3} }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For the eventual referee response
+\def\changed    {\color{titlecol} }
+%\def\changed    {}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Other stuff I use a lot
+\def\oiii		{$\mathrm{\left[ O \textsc{iii}\right] }$}
+\def\moiii		{\mathrm{\left[ O \textsc{iii}\right] }}
+\def\nii		{$\mathrm{\left[ N \textsc{ii}\right] }$}
+\def\mnii		{\mathrm{\left[ N \textsc{ii}\right] }}
+\def\sii		{$\mathrm{\left[ S \textsc{ii}\right] }$}
+\def\msii		{\mathrm{\left[ S \textsc{ii}\right] }}
+\def\galfit     {{\tt GALFIT}}
+\def\gandalf     {{\tt GANDALF}}
+\def\emcee      {{\tt emcee}}
+
+\def\msun	       {$\rm{M}_{\odot}$}
+\def\mmsun	{\rm{M}_{\odot}}
+\def\fnobulge    {$f_{\rm no~bulge}$}
+\def\mfnobulge {f_{\rm no~bulge}}
+\def\fedgeon     {$f_{\rm edge-on}$}
+\def\mfedgeon  {f_{\rm edge-on}}
+\def\fcnobulge    {$f_{\rm confirmed~no~bulge}$}
+\def\mfcnobulge {f_{\rm confirmed~no~bulge}}
+\def\ha               {H$\alpha$}
+\def\mha            {{\rm H}\alpha}
+\def\mbh           {$M_{\rm BH}$}
+\def\mmbh        {M_{\rm BH}}
+
+\def\kappamean {$\overline{\kappa}$}
+\def\mkappamean {\overline{\kappa}}
+
+\def\lesssim{\mathrel{\hbox{\rlap{\hbox{\lower3pt\hbox{$\sim$}}}\hbox{\raise2pt\hbox{$<$}}}}}
+\def\gtrsim{\mathrel{\hbox{\rlap{\hbox{\lower3pt\hbox{$\sim$}}}\hbox{\raise2pt\hbox{$>$}}}}}
+
+
+\newcommand\nodata{ ~$\cdots$~ }
 
 %define all that you need to define
 \def\starpy {\textsc{starpy}}
@@ -14,8 +78,7 @@
 %and uncomment the next line)
 %\include{mymacros}
 
-\title{The influence of morphology, AGN and environment     %your thesis title,
-        on the quenching histories of galaxies}   %note \\[1ex] is a line break in the title
+\title{The influence of morphology, AGN and environment on the quenching histories of galaxies}   %note \\[1ex] is a line break in the title
 
 \author{Rebecca Jane Smethurst}             %your name
 \college{Pembroke College}  %your college
@@ -29,9 +92,6 @@
 
 %this baselineskip gives sufficient line spacing for an examiner to easily
 %markup the thesis with comments
-\baselineskip=18pt plus1pt
-\linespread{1.2}
- \setlength{\parskip}{1em}
  
 %set the number of sectioning levels that get number and appear in the contents
 \setcounter{secnumdepth}{3}
@@ -42,12 +102,14 @@
 
 \begin{dedication}
 This thesis is dedicated to\\
- someone\\
-for some special reason\\
+all of those\\
+that dare to dream.
 \end{dedication}
 
 \begin{acknowledgements}
 Thank ALLL TEH people. 
+Including, for inspiration and the help with perseverance: T. Swift, B. Springsteen, C. Martin et al., Dr M. Grey, L. Gilmore, R. Gilmore, A. Haim et al., E. Sheeran, 
+
 \end{acknowledgements}
 
 \begin{abstract}  
@@ -59,6 +121,11 @@ GZ shit happens.         % include the abstract
 \listoffigures              % generate and include a list of figures
 \end{romanpages}            % end roman page numbering
 
+
+\baselineskip=18pt plus1pt
+\linespread{1.2}
+ \setlength{\parskip}{1em}
+ 
 %now include the files of latex for each of the chapters etc
 \include{introduction/introduction}
 \include{starpy/starpy}

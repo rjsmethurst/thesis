@@ -23,21 +23,43 @@ There are many mechanisms which are proposed to cause quenching; including merge
  
  To study this I need to look at how quenching timescale changes in groups and clusters of galaxies with different properties in order to isolate the cause of the density-morphology and density-SFR correlations. 
 
-\section{Galaxy Zoo}
+\section{Galaxy Zoo}\label{class}
 
-In this investigation I use visual classifications of galaxy morphologies from the Galaxy Zoo 2\footnote{\url{http://zoo2.galaxyzoo.org/}} citizen science project \citep{GZ2}, which obtains multiple independent classifications for each galaxy image; the full question tree for each image is shown in Figure 1 of \citealt{GZ2}.  
+In this investigation I use visual classifications of galaxy morphologies from the Galaxy Zoo 2\footnote{\url{http://zoo2.galaxyzoo.org/}} citizen science project \citep{GZ2}, which obtains multiple independent classifications for each galaxy image; the full question tree is shown in Figure \ref{tree}.  
 
-The Galaxy Zoo 2 (GZ2) project consists of $304, 022$ images from the SDSS DR8 (a subset of those classified in Galaxy Zoo 1; GZ1) all classified by \emph{at least} 17 independent users, with the mean number of classifications standing at $\sim42$. The GZ2 sample is more robust than the GZ1 sample and provides more detailed morphological classifications, including features such as bars, the number of spiral arms and the ellipticity of smooth galaxies. It is for these reasons I use the GZ2 sample, as opposed to the GZ1, allowing for further investigation of specific galaxy classes in the future (see Section~\ref{future}). The only selection that was made on the sample was to remove objects considered to be stars, artefacts or merging pairs by the users (i.e. with $p_{star/artefact} ~\geq~ 0.8$ or $p_{merger} ~\geq 0.420$; see \citealt{GZ2} Table 3 and discussion for details of this fractional limit). Further to this, I required NUV photometry from the GALEX survey, within which $\sim42\%$ of the GZ2 sample were observed, giving a total sample size of $126, 316$ galaxies. The completeness of this subsample of GZ2 matched to GALEX is shown in Figure~\ref{complete} with the $u$-band absolute magnitude against redshift for this sample compared with the SDSS data set. Typical Milky Way $L_*$ galaxies with $M_u \sim -20.5$ are still included in the GZ2 subsample out to the highest redshift of $z \sim 0.25$; however dwarf and lower mass galaxies are only detected at the lowest redshifts.
+\begin{figure}
+\centering{
+\includegraphics[width=\textwidth]{introduction/gz2_tree.pdf}}
+\caption[GZ2 classification decision tree]{Flowchart of the classification tree for GZ2, beginning at the top. Tasks are colour-coded by their relative depths in the decision tree with tasks in green, blue and purple respectively one, two or three steps below branching points in the decision tree.}
+\label{tree}
+\end{figure}
 
-The first task of GZ2 asks users to choose whether a galaxy is mostly smooth, is featured and/or has a disc or is a star/artefact. Unlike other tasks further down in the decision tree, every user who classifies a galaxy image will complete this task (others, such as whether the galaxy has a bar, is dependent on a user having first classified it as a featured galaxy). Therefore I have the most statistically robust classifications at this level.
-
-The classifications from users produces a vote fraction for each galaxy (the debiased fractions calculated by \citet{GZ2} were used in this investigation); for example if 80 of 100 people thought a galaxy was disc shaped, whereas 20 out of 100 people thought the same galaxy was smooth in shape (i.e. elliptical), that galaxy would have vote fractions $p_{s} = 0.2$ and $p_{d} = 0.8$. In this example this galaxy would be included in the \emph{`clean'} disc sample ($p_d \geq 0.8$) according to \cite{GZ2} and would be considered a late-type galaxy. All previous Galaxy Zoo projects have incorporated extensive analysis of volunteer classifications to measure classification accuracy and bias, and compute user weightings (for a detailed description of debiasing and consistency-based user weightings, see either Section 3 of \citealt{Lintott09} or Section 3 of \citealt{GZ2}). 
+The Galaxy Zoo 2 (GZ2) project consists of $304, 022$ images from the SDSS DR8 (a subset of those classified in Galaxy Zoo 1; GZ1) all classified by \emph{at least} 17 independent users, with the mean number of classifications standing at $\sim42$. The GZ2 sample is more robust than the GZ1 sample and provides more detailed morphological classifications, including features such as bars, the number of spiral arms and the ellipticity of smooth galaxies. It is for these reasons I use the GZ2 sample, as opposed to the GZ1, allowing for further investigation of specific galaxy classes in the future. 
 
 \begin{figure*}
+\centering{
+\includegraphics[width=0.8\textwidth]{introduction/mag_redshift_completeness.pdf}}
+\caption[GZ2-GALEX sample completeness]{Absolute $u$-band magnitude against redshift for the whole of SDSS (grey dashed lines) in comparison to the GZ2 subsample (blue solid lines). Typical Milky Way $L_*$ galaxies with $M_u \sim -20.5$ are still included in the GZ2 subsample out to the highest redshift of $z \sim 0.25$.}
+\label{complete}
+\end{figure*}
+
+\begin{figure}
 \centering{
 \includegraphics[width=\textwidth]{introduction/mosaic_disc_fraction_z_0-07_0-075.pdf}}
 \caption[Example SDSS images with GZ2 vote fractions]{Randomly selected SDSS \emph{gri} composite images showing the continuous probabilistic nature of the Galaxy Zoo sample from a redshift range $0.070 < z < 0.075$. The debiased disc vote fraction (see \citealt{GZ2}) for each galaxy is shown. The scale for each image is $0.099~\rm{arcsec/pixel}$.}
 \label{mosaic}
-\end{figure*}
+\end{figure}
 
-The classifications are highly accurate and provide a continuous scale of morphological features, as shown in Figure~\ref{mosaic}, rather than a simple binary classification separating elliptical and disc galaxies. These classifications allow each galaxy to be considered as a probabilistic object with both bulge and disc components. 
+
+The decision tree that users are led through whilst classifying galaxies with GZ2 is shown in Figure~\ref{tree}. The first task of GZ2 asks users to choose whether a galaxy is mostly smooth, is featured and/or has a disc or is a star/artefact. Unlike other tasks further down in the decision tree, every user who classifies a galaxy image will complete this task (others, such as whether the galaxy has a bar, is dependent on a user having first classified it as a featured galaxy). Therefore I have the most statistically robust classifications at this level.
+
+The classifications from users produces a vote fraction for each galaxy (the debiased fractions calculated by \citet{GZ2} were used in this investigation); for example if 80 of 100 people thought a galaxy was disc shaped, whereas 20 out of 100 people thought the same galaxy was smooth in shape (i.e. elliptical), that galaxy would have vote fractions $p_{s} = 0.2$ and $p_{d} = 0.8$. In this example this galaxy would be included in the \emph{`clean'} disc sample ($p_d \geq 0.8$) according to \cite{GZ2} and would be considered a late-type galaxy. All previous Galaxy Zoo projects have incorporated extensive analysis of volunteer classifications to measure classification accuracy and bias, and compute user weightings (for a detailed description of debiasing and consistency-based user weightings, see either Section 3 of \citealt{Lintott09} or Section 3 of \citealt{GZ2}). 
+
+
+The classifications are highly accurate and provide a continuous spectrum of morphological features, as shown in Figure~\ref{mosaic}, rather than a simple binary classification separating elliptical and disc galaxies. These classifications allow each galaxy to be considered as a probabilistic object with both bulge and disc components. 
+
+\subsection{Defining the \textsc{gz2-galex} main galaxy sample}
+
+The only selection that was made on the GZ2 sample was to remove objects considered to be stars, artefacts or merging pairs by the users (i.e. with $p_{star/artefact} ~\geq~ 0.8$ or $p_{merger} ~\geq 0.420$; see \citealt{GZ2} Table 3 and discussion for details of this fractional limit). Further to this, I required NUV photometry from the GALEX survey, within which $\sim42\%$ of the GZ2 sample were observed, giving a total sample size of $126, 316$ galaxies. This will be referred to as the \textsc{gz2-galex} sample. 
+
+The completeness of the \textsc{gz2-galex} sample is shown in Figure~\ref{complete} with the $u$-band absolute magnitude against redshift, compared with the SDSS data set. Typical Milky Way $L_*$ galaxies with $M_u \sim -20.5$ are still included in the GZ2 subsample out to the highest redshift of $z \sim 0.25$; however dwarf and lower mass galaxies are only detected at the lowest redshifts.
