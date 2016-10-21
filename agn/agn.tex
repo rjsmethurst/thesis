@@ -24,7 +24,7 @@ In Chapter \ref{morph}, rapid quenching rates were dominant across the smooth we
 \end{figure*}
 
 
-Type 2 AGN were selected from the \textsc{gz2-galex} sample using a BPT diagram \citep{bpt} using line and continuum strengths for [OIII], [NII], [SII] and [OII] obtained from the MPA-JHU catalogue \citep{kauffmann03, brinchmann04}. A BPT diagram uses emission line ratio diagnostics to determine whether a galaxy is a star forming galaxy, a Seyfert (i.e. hosting an AGN) or a LINER. The signal-to-noise ratio was required to be S/N $> 3$ for each emission line as in \cite{schawinski10a}. Those galaxies which satisfied all of the inequalities defined in \citet[][to separate SF galaxies from AGN]{kewley01} and \citet[][to separate SF galaxies from composite SF-AGN galaxies]{kauffmann03b} were selected as Type 2 AGN, giving $1,299$ host galaxies ($\sim10\%$ of the \textsc{gz2-galex} sample).
+Type 2 AGN were selected from the \textsc{gz2-galex} sample using a BPT diagram \citep{bpt} using line and continuum strengths for [OIII], [NII], [SII] and [OII] obtained from the MPA-JHU catalogue \citep{kauffmann03, brinchmann04}. A BPT diagram uses emission line ratio diagnostics to determine whether a galaxy is a star forming galaxy, a Seyfert (i.e. hosting an AGN) or a LINER. The signal-to-noise ratio was required to be S/N $> 3$ for each emission line as in \cite{schawinski10a}. Those galaxies which satisfied all of the inequalities defined in \citet[][to separate SF galaxies from AGN]{kewley01} and \citet[][to separate SF galaxies from composite SF-AGN galaxies]{kauffmann03b} were selected as Type 2 AGN, giving $1,299$ host galaxies ($\sim10\%$ of the \textsc{gz2-galex} sample; in agreement with estimates of the local AGN fraction of \citealt{kauffmann04, pimbblet13}).
 
 \cite{Sarzi10, yan12} and \cite{Singh13} have all demonstrated that LINERs are not primarily powered by AGN, therefore for purity, these galaxies were excluded from the sample using the definition from \cite[][$55$ galaxies total]{kewley06} with no change to the results. These $1,244$ galaxies will be referred to as the \textsc{agn-host} sample; Figure~\ref{bpt} shows the entire \textsc{agn-host} and \textsc{gz2-galex} samples with the selection criteria used on a BPT diagram.
 
@@ -50,7 +50,7 @@ The Eddington luminosity, $L_{Edd}$, is derived from the black hole mass, $M_{BH
 \begin{equation}
 L_{Edd} = 3\times10^4 \left(\frac{M_{BH}}{M_{\odot}}\right) L_{\odot}.
 \end{equation}
-The distributions of L[OIII], $M_{BH}$ and $\lambda_{Edd}$ of the \textsc{agn-host} sample are shown in Figure~\ref{fig:agndistributions}. SDSS images for 10 randomly selected galaxies from the \textsc{agn-host} sample are shown in Figure~\ref{mosaic}. The decomposition of the \textsc{agn-host} sample into red sequence, green valley and blue cloud galaxies is shown in Tables~\ref{table:agnsubs} and \ref{table:qagnsubs} along with further division by galaxy type and SFR (where available for the \textsc{agn-host} sample from the MPA-JHU catalog) respectively. 
+The distributions of L[OIII], $M_{BH}$ and $\lambda_{Edd}$ of the \textsc{agn-host} sample are shown in Figure~\ref{fig:agndistributions}. SDSS images for 10 randomly selected galaxies from the \textsc{agn-host} sample are shown in Figure~\ref{mosaic}. The decomposition of the \textsc{agn-host} sample into red sequence, green valley and blue cloud galaxies is shown in Tables~\ref{table:agnsubs} and \ref{table:agnqsubs} along with further division by galaxy type and SFR (where available for the \textsc{agn-host} sample from the MPA-JHU catalog) respectively. 
 
 
 \begin{table}
@@ -86,8 +86,8 @@ Late-type ($p_s \geq 0.8$)  & \begin{tabular}[c]{@{}c@{}}569\\ (45.7\%)\end{tabu
 
 \begin{figure*}
 \centering
-\includegraphics[width=\textwidth]{agn/agn-host_inactive_z_mass_distributions.pdf}
-\caption[Redshift and mass distributions of the \textsc{agn-host} and \textsc{inactive} samples]{Distribution of the redshifts (left) and stellar masses (right) in the \textsc{agn-host} sample (solid lines) in comparison to the matched control \textsc{inactive} sample (dashed lines).}
+\includegraphics[width=\textwidth]{agn/agn-host_inactive_pd_mass_distributions.pdf}
+\caption[Morphology and mass distributions of the \textsc{agn-host} and \textsc{inactive} samples]{Distribution of the GZ2 disc vote fractions ($p_d$; left) and stellar masses (right) in the \textsc{agn-host} sample (solid lines) in comparison to the matched control \textsc{inactive} sample (dashed lines).}
 \label{fig:zmdistmatch}
 \end{figure*}
 
@@ -102,11 +102,11 @@ Late-type ($p_s \geq 0.8$)  & \begin{tabular}[c]{@{}c@{}}569\\ (45.7\%)\end{tabu
 A control sample of inactive galaxies was constructed by removing from the \textsc{gz2-galex} sample all galaxies with line strengths indicative of potential AGN activity \citep{kauffmann03b}, as well as sources identified as Type 1 AGN by the presence of broad emission lines \citep{Oh15}.  I selected a mass- and morphology-matched inactive sample by identifying between 1 and 5 inactive galaxies for each \textsc{agn-host} galaxy with the same stellar mass (to within $\pm5\%$) and GZ2 `smooth' and `disc' vote fractions (to within $\pm 0.1$) giving $6107$ galaxies. This sample will be referred to as the \textsc{inactive} sample. 
 
 
-Figure~\ref{fig:zmdistmatch} shows the redshift (left) and stellar (right) mass distributions of the \textsc{agn-host} sample in comparison to the matched \textsc{inactive} sample. A Kolmogorov-Smirnov test revealed the redshift distributions of the \textsc{inactive} and \textsc{agn-host} samples are statistically indistinguishable ($D \sim 0.16$, $p \sim 0.88$). 
+Figure~\ref{fig:zmdistmatch} shows the GZ2 disc vote fraction ($p_d$; left) and stellar mass ($M_*$; right) distributions of the \textsc{agn-host} sample in comparison to the matched \textsc{inactive} sample. A Kolmogorov-Smirnov test revealed the redshift distributions of the \textsc{inactive} and \textsc{agn-host} samples are statistically indistinguishable ($D \sim 0.16$, $p \sim 0.88$). 
 
 The \textsc{agn-host} and \textsc{inactive}  samples are also shown on both an optical colour-magnitude diagram and in the SFR-stellar mass plane in Figure~\ref{cmdsfms} in comparison to the distribution of SDSS DR7 galaxies. SFRs and stellar masses are obtained from the MPA JHU catalog, where available, which follow the prescriptions outlined in \cite{brinchmann04} and \cite{Salim07} for calculating the total aperture corrected galaxy SFR in the presence of an AGN. 
 
-The majority of the \textsc{agn-host} sample would be defined as residing in the blue cloud ($73\%$) on the optical colour-magnitude diagram despite the fact that a significant proportion of the sample ($47\%$) lie more than $1\sigma$ ($0.3$ $\rm{dex}$) below the star forming `main sequence' \citep[][see Figure \ref{cmdsfms} and Table~\ref{table:agnqsubs}]{peng10}.
+The majority of the \textsc{agn-host} sample would be defined as residing in the blue cloud ($\sim73\%$) on the optical colour-magnitude diagram despite the fact that a significant proportion of the sample ($32\%$) lie more than $1\sigma$ ($0.3$ $\rm{dex}$) below the star forming `main sequence' \citep[][see Figure \ref{cmdsfms} and Table~\ref{table:agnqsubs}]{peng10}.
 
 \subsection{Results}\label{results}
 
@@ -135,7 +135,9 @@ The majority of the \textsc{agn-host} sample would be defined as residing in the
 
 %Figures~\ref{eddratiosplit}, \ref{time} \& \ref{rate} show the population density distributions for the quenching time, $t_q$ and exponential quenching rate, $\tau$, with shaded regions to show the uncertainties for both smooth and disc weighted populations. 
 
-In Figure \ref{eddratiosplit} the \textsc{agn-host} smooth and disc weighted populations are split across three Eddington ratio, $\lambda_{Edd}$, bins to investigate any trends with the accretion rate of the black hole in the population densities for the quenching time and rate. The Eddington ratio boundaries were chosen to give equal numbers of \textsc{agn-host} galaxies in each bin. In Figures~\ref{time} \& \ref{rate} the \textsc{agn-host} and \textsc{inactive} smooth and disc weighted populations are split across three mass bins to investigate any trends with mass in the population densities for the quenching time and rate respectively. The mass boundaries were chosen to give roughly equal numbers of inactive galaxies in each bin, before mass matching to the \textsc{agn-host} sample. This decision was made to ensure the mass bins were representative of `typical' galaxies rather than being biased by the mass distribution of the \text{agn-host} sample which tend to occupy higher mass galaxies. 
+In Figure \ref{eddratiosplit} the \textsc{agn-host} smooth and disc weighted populations are split across three Eddington ratio, $\lambda_{Edd}$, bins to investigate any trends with the accretion rate of the black hole in the population densities for the quenching time and rate. The Eddington ratio boundaries were chosen to give equal numbers of \textsc{agn-host} galaxies in each bin. 
+
+In Figures~\ref{time} \& \ref{rate} the \textsc{agn-host} and \textsc{inactive} smooth and disc weighted populations are split across three mass bins to investigate any trends with mass in the population densities for the quenching time and rate respectively. The mass boundaries were chosen to give roughly equal numbers of inactive galaxies in each bin, before mass matching to the \textsc{agn-host} sample. This decision was made to ensure the mass bins were representative of `typical' galaxies rather than being biased by the mass distribution of the \text{agn-host} sample which tend to occupy higher mass galaxies. 
 
 No cut on the star formation rate is made to the galaxies which contribute to Figures \ref{eddratiosplit}-\ref{rate}, but those galaxies poorly fit by an exponentially declining SFH are down-weighted so that they do not contribute to the results presented here (see Section~\ref{popstarpy} for a description of the \textsc{popstarpy} method). Table~\ref{massbins} contains the percentages of the population densities shown in Figures~\ref{time} \& \ref{rate} in the quenching regimes originally defined in Chapter~\ref{morph} for rapid ($\tau < 1$ Gyr), intermediate ($1 < \tau ~\rm{[Gyr]} < 2$) and slow ($\tau > 2$ Gyr) quenching rates in each of the three mass bins. Uncertainties on the population densities (shown by the shaded regions) are determined from the maximum and minimum values spanned by $N = 1000$ bootstrap iterations, each sampling $90\%$ of the galaxy population. $1\sigma$ uncertainties are quoted for the percentages in Table~\ref{massbins}, calculated from the bootstrapped distributions.
 
@@ -180,7 +182,7 @@ There are however minimal differences between the smooth and disc weighted distr
 
 Quenching at early times is observed within the \textsc{inactive} population (see right panels of Figure~\ref{time}), where the population density is roughly constant until recent times where the distribution drops off.  This drop-off occurs at earlier times with increasing mass, with a significant lack of quenching occurring at early times for low mass \textsc{inactive} galaxies (top right panel Figure~\ref{time}). This is evidence of downsizing within the \textsc{inactive} galaxy population whereby stars in massive galaxies form first and quench early \citep{Cowie96, Thomas10}. 
 
-The population densities for smooth weighted higher mass (bottom left panels Figures~\ref{time} \& \ref{rate}) and lower Eddington ratio (top panels Figure \ref{eddratiosplit}) \textsc{agn-host} galaxies are also dominated by slow, early quenching. This implies that AGN feedback is not responsible for the cessation of star formation within a proportion of these galaxies, as this quenching has occurred prior to the triggering of the current AGN. I speculate that this is also due to the effects of downsizing rather than being caused by the current AGN. Since the lower Eddington ratio \textsc{agn-host} population is also dominated by this early quenching at slow rates (top panels Figure~\ref{eddratiosplit}) this supports the idea that the AGN is not strong enough to be the cause of this quenching.  This earlier evolution would first form a slowly `dying' or `dead' galaxy typical of massive elliptical galaxies which could then have a recent infall of gas either through a minor merger, galaxy interaction or environmental change, triggering further star formation and feeding the central black hole, triggering an AGN \citep{kaviraj14b}. In turn this AGN can then quench the recent boost in star formation. This track is similar to the evolution history proposed for blue ellipticals \citep[][and detected in the top panel of Figure~\ref{blue_c}]{Kaviraj13, McIntosh14, Haines15}. This SFH would then give rise to the distribution seen within the high mass \textsc{agn-host} population for both time and rate parameters (bottom panels of Figures~\ref{time} \& \ref{rate}).
+The population densities for smooth weighted higher mass (bottom left panels Figures~\ref{time} \& \ref{rate}) and lower Eddington ratio (top panels Figure \ref{eddratiosplit}) \textsc{agn-host} galaxies are also dominated by slow, early quenching. This implies that AGN feedback is not responsible for the cessation of star formation within a proportion of these galaxies, as this quenching has occurred prior to the triggering of the current AGN. I speculate that this is also due to the effects of downsizing rather than being caused by the current AGN. Since the lower Eddington ratio \textsc{agn-host} population is also dominated by this early quenching at slow rates (top panels Figure~\ref{eddratiosplit}) this supports the idea that the AGN is not strong enough to be the cause of this quenching.  This earlier evolution would first form a slowly `dying' or `dead' galaxy typical of massive elliptical galaxies which could then have a recent infall of gas either through a minor merger, galaxy interaction or environmental change, triggering further star formation and feeding the central black hole, triggering an AGN \citep{kaviraj14b}. In turn this AGN can then quench the recent boost in star formation. This track is similar to the evolution history proposed for blue ellipticals \citep[][and detected in the top panel of Figure~\ref{blue_c}]{Kaviraj13, McIntosh14, Haines15}. This SFH would then give rise to the distribution seen within the high mass smooth weighted \textsc{agn-host} population for both time and rate parameters (bottom panels of Figures~\ref{time} \& \ref{rate}).
 
 Alternatively in the high mass disc weighted \textsc{agn-host} population, in which slow, early quenching is also observed (dashed lines bottom left panels of Figures~\ref{time} \& \ref{rate}) this evolution could be due to initially isolated discs evolving slowly by the Kennicutt-Schmidt \citep{Schmidt59, Kennicutt97} law which can then undergo an interaction or merger to reinvigorate star formation, feed the central black hole and trigger an AGN \citep{Varela04, emsellem15}. These galaxies would need a large enough gas reservoir to fuel both SF throughout their lifetimes and the recent AGN. These high mass galaxies also play host to the most luminous AGN (mean $\log (L[OIII] ~[\rm{erg}~s^{-1}]) \sim 41.6$) and so this SFH challenges the typical merger driven co-evolution of luminous black holes and their host galaxies (see Section~\ref{intbulgeless} for an investigation into an alternative merger free black hole-galaxy co-evolution). 
 
@@ -209,8 +211,19 @@ However, there still remains the possibility that the AGN is not the cause of th
  
 
 Not all galaxies in the \textsc{agn-host} and \textsc{inactive} samples are quenching (as seen in Figure \ref{cmdsfms}) with a significant proportion of both the \textsc{agn-host} and \textsc{inactive} samples lying on the star forming `main sequence'. A galaxy can therefore still maintain star formation whilst hosting an AGN. The results presented in Section \ref{results} only reflect the trends for galaxies that have undergone or are currently undergoing quenching within the \textsc{agn-host} population and can therefore be accurately fit by an exponentially declining SFH. This prevalence of star forming AGN host galaxies, combined with the results above allows us to consider that either: (i)  the AGN are the cause of the rapid quenching observed but only in gas-poor host galaxies where they can have a large impact, (ii) the AGN are a consequence of another quenching mechanism but can also be triggered by other means which do not cause quenching, or (iii) the SFR of a galaxy can recover post-quench and return to the star forming sequence after a few Gyr (see recent simulations by \citealt{pontzen16} and \citealt{sparre16}). Further investigation will therefore be required to determine the nature of this quenching (see Section \ref{future} for a discussion of proposed future work).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
-%INSERT PARAGRAPH ON HOW TIES IN WITH LUMINOSITY FUNCTION 
 
 \newpage
 
@@ -370,6 +383,14 @@ Reduced spectra from the IDS on the INT for the 5 galaxies observed with the cor
 %
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure*}
+\centering{
+\includegraphics[width=\textwidth]{agn/diskdom_mbh_btot_stellar_mass_distributions.pdf}}
+\caption[Galaxy and black hole properties of the \textsc{diskdom} sample in comparison to the \textsc{qsocontrol} sample]{Distributions of black hole mass (left), upper limits on the r-band bulge-to-total mass ratio from \citet[][middle]{simard11} and stellar mass (right) of the \textsc{diskdom} sample (solid) in comparison to the \textsc{qsocontrol} sample (dashed).}
+\label{fig:diskdomdist}
+\end{figure*}
 
 \begin{figure*}
 \centering{
