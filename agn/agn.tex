@@ -266,16 +266,25 @@ An initial sample of AGN was selected using the W2R sample of \citet{edelson12},
 
 \begin{figure*}
 \centering{
-\includegraphics[width=\textwidth]{agn/mosaic_random_13_int5.pdf}
-\caption[SDSS images of selected bulgeless, disc dominated galaxies]{Example postage stamp SDSS images of galaxies within the sample of 101 bulgeless galaxies for which we have spectra. The last 5 images on the bottom row are the galaxies observed with the IDS on the INT. The scale for each image is shown by the $5^{\prime \prime}$ ruler in each panel.  
+\includegraphics[height=0.9\textheight]{agn/mosaic_all_diskdom.pdf}
+\caption[SDSS images of DISKDOM sample]{Postage stamp SDSS images of the $96$ galaxies within the \textsc{diskdom} sample for which we have SDSS spectra. The scale for each image is shown by the $5^{\prime \prime}$ ruler in the top left panel.  
 }}
 \label{fig:exampleimages}
 \end{figure*}
 
 
-Following the AGN selection described above, galaxies imaged by the Sloan Digital Sky Survey are further sub-selected. There are 1,844 W2R sources with positional matches having reported coordinates within $3^{\prime \prime}$ of a source in SDSS \citep{york00} Data Release 8 \citep{sdssdr8}, a fraction consistent with the fractional area of the SDSS versus an all-sky catalog. %76 per cent of this sub-sample have measured redshifts, with a peak redshift distribution of $z \approx 0.12$.  90 percent of sources with redshifts have $z < 0.6$; the distribution has a long tail to $z_{\rm max} = 2.35$.
+\begin{figure*}
+\centering{
+\includegraphics[width=\textwidth]{agn/mosaic_INT_gal_only.pdf}
+\caption[SDSS images of DISKDOM sample]{Postage stamp SDSS images of the $5$ galaxies observed with the IDS on the INT within the \textsc{diskdom} sample. The scale for each image is shown by the $5^{\prime \prime}$ ruler in the left panel.  
+}}
+\label{fig:INTimages}
+\end{figure*}
 
-Each SDSS ugriz colour cutout is examined to identify disk-dominated features. 101 disk-dominated AGN host galaxies were identified on the basis of clearly identifiable spiral arms, bars or obvious edge-on disks. I shall refer to these galaxies as the \textsc{diskdom} sample. Figure \ref{fig:exampleimages} shows a random selection of galaxies from this sample.
+
+Following the AGN selection described above, galaxies imaged by the Sloan Digital Sky Survey are further sub-selected. There are 1,844 W2R sources with positional matches having reported coordinates within $3^{\prime \prime}$ of a source in SDSS \citep{york00} Data Release 8, a fraction consistent with the fractional area of the SDSS versus an all-sky catalog. %76 per cent of this sub-sample have measured redshifts, with a peak redshift distribution of $z \approx 0.12$.  90 percent of sources with redshifts have $z < 0.6$; the distribution has a long tail to $z_{\rm max} = 2.35$.
+
+Each SDSS ugriz colour cutout is examined to identify disk-dominated features. 101 disk-dominated AGN host galaxies were identified on the basis of clearly identifiable spiral arms, bars or obvious edge-on disks. I shall refer to these galaxies as the \textsc{diskdom} sample. Figure \ref{fig:exampleimages} \& \ref{fig:INTimages} collectively show the SDSS postage stamps for all galaxies in the sample.
 
 
 
@@ -283,14 +292,25 @@ Each SDSS ugriz colour cutout is examined to identify disk-dominated features. 1
 \subsubsection{Spectra}\label{sec:spectra}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Of the 101 disk-dominated AGN host galaxies with SDSS imaging observations, 73 have spectra from SDSS Data Release 9 \citep{dr9_ref}. The others are not included because they lie outside the Data Release 7 footprint (which had high spectral completeness) and were not targets for any SDSS-III projects (which have specific requirements and generally do not include AGN host galaxies with low enough redshift to identify spiral arms in SDSS imaging). {\notebsm 23 also have spectra that were identified from Chen and Edelson \& Malken.}  The broad $H\alpha$ emission for  {\notebsm 5 additional sources} were measured using long-slit spectra using Intermediate Dispersion Spectrograph (IDS) on the Isaac Newton Telescope (INT) from 21st-23rd May 2014. I reduced spectra using the standard reduction pipeline of Massey, Valdes \& Barnes (1992) using IRAF modules to debiase, dark subtract, flat field, calibrate, sky subtract, flux calibrate and extract spectra. These reduced spectra are shown in Figure \ref{fig:INTspectra} for the 5 galaxies observed.
+Of the 101 disk-dominated AGN host galaxies with SDSS imaging observations, 73 have spectra from SDSS Data Release 9 \citep{ahn12}. The others are not included because they lie outside the Data Release 7 footprint (which had high spectral completeness) and were not targets for any SDSS-III projects (which have specific requirements and generally do not include AGN host galaxies with low enough redshift to identify spiral arms in SDSS imaging). 23 also have SDSS spectra and were first identified as AGN by \cite{shen08} and \cite{edelson12}. Example spectra for 5 of these SDSS spectra are shown in Figure~\ref{fig:SDSSspectra}.
+
+\begin{figure*}
+\centering{
+\includegraphics[height=0.8\textheight]{agn/sample_sdss_spectra.pdf}
+\caption[Optical spectra of 5 bulgeless galaxies observed in SDSS]{
+5 example SDSS spectra from with the corresponding measured redshift values shown. Each panel shows the same rest-frame wavelength range (bottom axis of each panel); observed wavelengths are shown on the top axis of each panel. All spectra show broadened \ha\ emission, confirming that the multi-wavelength AGN selection employed here efficiently selects unobscured AGN.
+}}
+\label{fig:INTspectra}
+\end{figure*}
+
+The broad $H\alpha$ emission for  {\notebsm 5 additional sources} were measured using long-slit spectra using Intermediate Dispersion Spectrograph (IDS) on the Isaac Newton Telescope (INT) from 21st-23rd May 2014. I reduced spectra using the standard reduction pipeline of Massey, Valdes \& Barnes (1992) using IRAF modules to debiase, dark subtract, flat field, calibrate, sky subtract, flux calibrate and extract spectra. These reduced spectra are shown in Figure \ref{fig:INTspectra} for the 5 galaxies observed.
 
 
 \begin{figure*}
 \centering{
-\includegraphics[width=\textwidth]{agn/int_spectra.pdf}
+\includegraphics[height=0.8\textheight]{agn/int_spectra.pdf}
 \caption[Optical spectra of 5 bulgeless galaxies observed on the INT with the IDS]{
-Reduced spectra from the IDS on the INT for the 5 galaxies observed with the corresponding measured redshift values shown. Each panel shows the same rest-frame wavelength range (bottom axis of each panel); observed wavelengths are shown on the top axis of each panel, with redshifts in the top right of each panel. All spectra show broadened \ha\ emission, confirming that the multi-wavelength AGN selection employed here efficiently selects unobscured AGN.
+Reduced spectra from the IDS on the INT for the 5 galaxies observed. Each panel shows the same rest-frame wavelength range (bottom axis of each panel); observed wavelengths are shown on the top axis of each panel, with redshifts in the top right of each panel. All spectra one again show broadened \ha\ emission, confirming that the multi-wavelength AGN selection employed here efficiently selects unobscured AGN.
 }}
 \label{fig:INTspectra}
 \end{figure*}
@@ -336,12 +356,8 @@ Total stellar masses are calculated using the well-studied relation between stel
 
 The distribution of the stellar masses calculated for the \textsc{diskdom} sample is shown in the right panel of Figure~\ref{fig:diskdomdist}. Each individual mass has an uncertainty of {\notebsm $0.3$ dex} from the scatter in the colour-luminosity relation, with typically an additional {\notebsm ????} uncertainty due to the AGN subtraction \citep[dependent on the nuclear luminosity, e.g.][]{simmons08}. The typical combined uncertainty in the stellar mass is {\notebsm ????} dex.
 
-Calculation of the bulge stellar mass for the \textsc{diskdom} sample is more complicated however. The nuclear emission, as estimated via comparison of {\tt psfMag} to {\tt modelMag}, is generally between {\notebsm 20 to 200 per cent} \citep{?} of the galaxy-only emission. The presence of the luminous AGN therefore severely compromises the estimates of the bulge-to-total ratio in the host galaxy provided by, e.g., the {\tt fracDeV} parameter reported in the SDSS catalogs. The {\tt fracDeV} parameter estimates that 80 per cent of the galaxies in this sample are pure \citet{devaucouleurs} bulges in the $r$-band, despite the fact that the sample was selected on the basis of clear visual signatures of dominant disks (Figure \ref{fig:exampleimages}). None of the photometric parameters measured by the SDSS pipeline allow for the dual presence of an AGN and a host galaxy. Without such considerations the unresolved AGN light is likely to be attributed to the compact bulge component in a bulge-disk model fit \citep{simmons08,thatothersimspaper,koss11}.
+Calculation of the bulge stellar mass for the \textsc{diskdom} sample is more complicated however. The nuclear emission, as estimated via comparison of {\tt psfMag} to {\tt modelMag}, is generally between {\notebsm 20 to 200 per cent} \citep{?} of the galaxy-only emission. The presence of the luminous AGN therefore severely compromises the estimates of the bulge-to-total ratio in the host galaxy provided by, e.g., the {\tt fracDeV} parameter reported in the SDSS catalogs. The {\tt fracDeV} parameter estimates that 80 per cent of the galaxies in this sample are pure \citet{devaucouleurs} bulges in the $r$-band, despite the fact that the sample was selected on the basis of clear visual signatures of dominant disks (Figure \ref{fig:exampleimages}). None of the photometric parameters measured by the SDSS pipeline allow for the dual presence of an AGN and a host galaxy. Without such considerations the unresolved AGN light is likely to be attributed to the compact bulge component in a bulge-disk model fit \citep{simmons08,koss11}.
 
-% wherever the first mention of a pseudo-bulge is, need to \citep{kormendy04}.
-AGN-host decomposition based on 2-dimensional image fitting \citep[e.g.,][]{peng02,peng10,gim2d} is more reliable \citep[e.g.][]{mclure99,urry00,mclure01,sanchez04,pierce07,gabor09,simmons11,simmons12b,simmons13,koss11,schawinski12}. However even in high-resolution \emph{Hubble Space Telescope (HST)} images \citep{simmons08,thatothersimspaper} or SDSS imaging at $z \gtrsim 0.06$ \citep{koss11,simmons13} the recovered bulge-to-total ratio can be highly uncertain, particularly for disk-dominated galaxies with a small bulge or pseudo-bulge component. %While the AGN-host decompositions of the sample of \citet{simmons13} recovered reliable parameters to compact pseudo-bulge components for 11 of 13 galaxies, those sources are at substantially lower redshift than this sample, and their AGN are significantly less luminous {\notebsm (quantify this more)}. 
-
-Bulge-to-total fits were made for the 5 galaxies observed at the INT with the IDS in the \textsc{diskdom} sample; the result of which is shown in Figure~\ref{fig:galfit}. Stable, but highly uncertain, bulge-to-total ratios were recovered for only {\notebsm 2} of the 5 galaxies (the top two galaxies in Figure~\ref{fig:galfit}). In the remaining 3 cases the nuclear emission was too bright and the resolution too low for a reliable bulge-to-disk decomposition.  Detailed AGN-host fits to the SDSS images in the entire sample are therefore not likely to produce useful measurements of bulge masses. \emph{HST} imaging would enable these measurements, and although currently not available for the galaxies in this sample, observations are currently underway in Cycle 24 (ID: 14606). 
 
 \begin{figure*}
 \centering{
@@ -351,10 +367,14 @@ Bulge-to-total fits were made for the 5 galaxies observed at the INT with the ID
 \label{fig:galfit}
 \end{figure*}
 
+% wherever the first mention of a pseudo-bulge is, need to \citep{kormendy04}.
+AGN-host decomposition based on 2-dimensional image fitting \citep[e.g.,][]{simard98,peng02,peng10} is more reliable \citep[e.g.][]{mclure99,urry00,mclure01,sanchez04,pierce07,gabor09,Simmons11,Simmons13,koss11}. However even in high-resolution \emph{Hubble Space Telescope (HST)} images \citep{simmons08} or SDSS imaging at $z \gtrsim 0.06$ \citep[][]{koss11,simmons13} the recovered bulge-to-total ratio can be highly uncertain, particularly for disk-dominated galaxies with a small bulge or pseudo-bulge \citep{kormendy04} component. %While the AGN-host decompositions of the sample of \citet{simmons13} recovered reliable parameters to compact pseudo-bulge components for 11 of 13 galaxies, those sources are at substantially lower redshift than this sample, and their AGN are significantly less luminous {\notebsm (quantify this more)}. 
+
+Bulge-to-total fits were made for the 5 galaxies observed at the INT with the IDS in the \textsc{diskdom} sample; the result of which is shown in Figure~\ref{fig:galfit}. Stable, but highly uncertain, bulge-to-total ratios were recovered for only {\notebsm 2} of the 5 galaxies (the top two galaxies in Figure~\ref{fig:galfit}). In the remaining 3 cases the nuclear emission was too bright and the resolution too low for a reliable bulge-to-disk decomposition.  Detailed AGN-host fits to the SDSS images in the entire sample are therefore not likely to produce useful measurements of bulge masses. \emph{HST} imaging would enable these measurements, and although currently not available for the galaxies in this sample, observations are currently underway in Cycle 24 (ID: 14606). 
 
 Nevertheless, it is possible to constrain the bulge contribution to the host galaxies using existing structural parameters from large-scale studies performing bulge-disk decompositions of SDSS galaxies. While such studies do not account for the presence of an AGN, their tendency to overestimate the bulge-to-total ratio as a result means that bulge masses derived from these quantities may be taken to be conservative upper limits.
 
-\citet{simard11} fit multiple models to 1.12 million galaxies in the SDSS catalog to determine best-fit models and structural parameters for each galaxy. Their $r$-band bulge-to-total ratio {\notebsm of the best-fit model} is taken as an upper limit to the true bulge-to-total ratio of the \textsc{diskdom} sample. To convert limits on bulge luminosities to limits on bulge masses, we assume the mass-to-light ratio of the bulge is equal to the mass-to-light ratio of the disk. This is a reasonable assumption for disk-dominated galaxies, where many of the ``bulge'' components are likely to be rotationally-supported pseudo-bulges \citep{kormendy04} with stellar populations similar to that of the disk {\notebsm \citep[e.g.,][]{graham01a,atheorypaperonthis}}.
+\citet{simard11} fit multiple models to 1.12 million galaxies in the SDSS catalog to determine best-fit models and structural parameters for each galaxy. Their $r$-band bulge-to-total ratio {\notebsm of the best-fit model} is taken as an upper limit to the true bulge-to-total ratio of the \textsc{diskdom} sample. To convert limits on bulge luminosities to limits on bulge masses, we assume the mass-to-light ratio of the bulge is equal to the mass-to-light ratio of the disk. This is a reasonable assumption for disk-dominated galaxies, where many of the ``bulge'' components are likely to be rotationally-supported pseudo-bulges \citep{kormendy04} with stellar populations similar to that of the disk {\notebsm \citep[e.g.,][]{graham01a}}.
 
 The upper bulge-to-total limits of the 89 galaxies in the \textsc{diskdom} sample which were included in the \citeauthor{simard11} study, range from {\notebsm $0.13 \leq \left({\rm B/Tot}\right)_{\rm max} \leq 1.0$, with a mean value of 0.5}. Applying these bulge-to-total limits to the stellar masses computed using the colour-luminosity relation \citep{bell01,baldry06} results in bulge mass upper limits of {\notebsm $3 \times 10^9 \mmsun < {\rm M_{bulge}} < 7 \times 10^{10} \mmsun $}. The distribution of bulge stellar masses for the \textsc{diskdom} sample are shown in the middle panel of Figure \ref{fig:diskdomdist}
 
