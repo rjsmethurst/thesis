@@ -3,7 +3,7 @@
 
 The following chapter is split into two parts; in Section \ref{agnfeedback} I investigate the connection between quenching parameters and the presence of an AGN and in Section \ref{intbulgeless} investigate how black holes grow in disc galaxies with merger free evolutionary histories. 
 
-\section{Rapid, recent quenching within a population of Type 2 AGN host galaxies}\label{agnfeedback}
+\section{Rapid, recent quenching within a population of Type 2 AGN host galaxies}\label{sec:agnfeedback}
 
 \emph{The work in the following chapter has been published in \citet{smethurst16}.}
 
@@ -229,7 +229,7 @@ Not all galaxies in the \textsc{agn-host} and \textsc{inactive} samples are quen
 
 \section{Bulgeless galaxies hosting growing black holes}\label{intbulgeless}
 
-\emph{The work in the following chapter has been submitted to MNRAS in Simmons, Smethurst \& Lintott (subm.). I was responsible for the data reduction, statistical analysis and assisted in the interpretation of the results.}
+\emph{The work in the following chapter is in preparation for submission to MNRAS in Simmons, Smethurst \& Lintott (in prep.). I was responsible for the spectral data reduction and statistical analysis and assisted in the interpretation of the results.}
 
 %INSERT PARAGRAPH LEADING ON FROM PREVIOUS SECTION
 
@@ -447,7 +447,12 @@ where $f =0.15$ \citep{elvis02}, is a lower limit on the radiative efficiency fa
 \frac{m}{t} = \left(\frac{\dot{m}}{\rm{M}_{\odot}~\rm{yr}^{-1}}\right) = \left( \frac{1.58\times 10^{-26}}{f} \right) \left( \frac{\rm{cm}~\rm{s}^{-1}}{c} \right)^2 \left( \frac{L_{\rm{bol}}}{\rm{erg}~\rm{s}^{-1}} \right).
 \end{equation}
 
-
+\begin{figure*}
+\centering
+\includegraphics[width=\textwidth]{agn/diskdom_mbh_btot_stellar_mass_distributions.pdf}
+\caption[Galaxy and black hole properties of the \textsc{discdom} sample in comparison to the \textsc{qsocontrol} sample]{Distributions of black hole mass (left), upper limits on the r-band bulge-to-total mass ratio from \citet[][middle]{simard11} and stellar mass (right) of the \textsc{discdom} sample (solid) in comparison to the \textsc{qsocontrol} sample (dashed).}
+\label{fig:discdomdist}
+\end{figure*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -458,32 +463,10 @@ where $f =0.15$ \citep{elvis02}, is a lower limit on the radiative efficiency fa
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{figure*}
-\centering
-\includegraphics[width=\textwidth]{agn/diskdom_mbh_btot_stellar_mass_distributions.pdf}
-\caption[Galaxy and black hole properties of the \textsc{discdom} sample in comparison to the \textsc{qsocontrol} sample]{Distributions of black hole mass (left), upper limits on the r-band bulge-to-total mass ratio from \citet[][middle]{simard11} and stellar mass (right) of the \textsc{discdom} sample (solid) in comparison to the \textsc{qsocontrol} sample (dashed).}
-\label{fig:discdomdist}
-\end{figure*}
 
-\begin{figure*}
-\centering
-\includegraphics[width=\textwidth]{agn/mass_bh_total_mass_fit_linmix_fit.pdf}
-\caption[Black hole stellar mass relation for the \textsc{discdom} sample]{Total stellar mass against the black hole mass of the 101 galaxies, including those observed by SDSS (crosses), with the IDS on INT (blue squares) and detections from \citet[open cirlces]{Simmons13}. The best fit line to the data points and two-dimensional errors from linear regression is shown (solid line) with $\pm3\sigma$ (grey shaded). I also show the best fit found using this same method to the early-type galaxies of \citet{haringrix04} (dashed line) with $\pm3\sigma$ (red shaded) and the measured values shown by the red circles. Despite the fact that these galaxies are predominantly disc dominated they will are most likely to lie above the \citet{haringrix04} relationship found for bulge dominated systems (see discussion in Section \ref{sec:bhmassrelations}).
-}
-\label{fig:totvsbh}
-\end{figure*}
+The total stellar mass and estimated bulge masses (see Section \ref{sec:galmass}) are shown against the black hole masses for the \textsc{discdom} sample in Figures~\ref{fig:totvsbh} \& \ref{fig:bulgevsbh} respectively. I fit a multiple linear regression model to both of these relations using an inference method which encompasses the uncertainties on both $x$- and $y$-dimensions and the intrinsic scatter in the data. The full method is outlined in \citet{kelly07} and is publicly available as a \emph{Python} module \textsc{linmix}\footnote{\url{http://linmix.readthedocs.org/}}; a brief outline of the method is provided below. 
 
-\begin{figure*}
-\centering
-\includegraphics[width=\textwidth]{agn/mass_bh_bulge_limits_INT_simmons13_measurements_linmix_fit.pdf}
-\caption[Black hole bulge mass relation for the \textsc{discdom} sample]{The upper limits on the calculated bulge masses are plotted against the black hole mass with the best fit to these upper limits and two-dimensional errors using linear regression methods (solid line) shown with $\pm3\sigma$ (grey shaded). The dashed line shows the fit if the upper limits are not treated as such. I also show the best fit found using this same method to the early-type galaxies of \citet{haringrix04} (dashed line) with $\pm3\sigma$ (red shaded) and the measured values shown by the red circles. Despite the fact that these galaxies are predominantly disc dominated they will are most likely to lie above the \citet{haringrix04} relationship found for bulge dominated systems (see discussion in Section \ref{sec:bhmassrelations}).
-}
-\label{fig:bulgevsbh}
-\end{figure*}
-
-
- 
-The total stellar mass and estimated bulge masses (see Section \ref{sec:galmass}) are shown against the black hole masses for the \textsc{discdom} sample in Figures~\ref{fig:totvsbh} \& \ref{fig:bulgevsbh} respectively. I fit a linear regression model to both of these relations using an inference method which encompasses the uncertainties on both $x$- and $y$-dimensions and the intrinsic scatter in the data. The full method is outlined in \citet{kelly07} and is publicly available as a \emph{Python} module \textsc{linmix}\footnote{\url{http://linmix.readthedocs.org/}}; a brief outline of the method is provided below. The linear regression model assumes:
+A multiple linear regression model assumes a simple linear relationship between two independent variables, $x$ and $y$, where both variables are unknown, with added noise, $\epsilon$, from an unknown unobserved random variable. In the \textsc{limmix} package this is modelled with the following form:
 \begin{equation}\label{2dlinemodel}
 \eta = \alpha + \beta * x_i + \epsilon
 \end{equation}
@@ -491,9 +474,9 @@ The total stellar mass and estimated bulge masses (see Section \ref{sec:galmass}
 x = x_i + x_{err}
 \end{equation}
 \begin{equation}\label{2dlinemodel3}
-y = \eta + y_{err}
+y = \eta + y_{err}.
 \end{equation}
-Here $\alpha$ and $\beta$ are the regression coefficients, $\epsilon$ is the intrinsic random scatter about the regression, $x_{err}$ is the measurement error in $x$, and $y_{err}$ is the measurement error in $y$. $\epsilon$ is assumed to be normally-distributed, centred around zero, with a variance $\sigma^2$. $x_{err}$ and $y_{err}$ are also assumed to be normally-distributed and centred around zero with variances $\sigma_x^2$ and $\sigma_y^2$, respectively and covariance $xy_{cov}$. The distribution of $x_i$ is modelled as a mixture of normal distributions, with group proportions $\pi$, means $\mu$, and variances $\tau^2$. This linear regression method can also incorporate the upper limits on the bulge mass measurements of the 89 SDSS galaxies measured by \citet[][see Section \ref{sec:galmass}]{simard11}, which is shown by the solid line in Figure~\ref{fig:bulgevsbh}.
+Here $\alpha$ and $\beta$ are the regression coefficients to be inferred (like $m$ and $c$ in a traditional $y=mx + c$ linear regression), $x_{err}$ is the error on the measured values $x_i$, and $y_{err}$ is the error on the measured values $\eta$. $\epsilon$ is assumed to be normally-distributed, centred around zero, with a variance $\sigma^2$. $x_{err}$ and $y_{err}$ are also assumed to be normally-distributed and centred around zero with variances $\sigma_x^2$ and $\sigma_y^2$, respectively and covariance $xy_{cov}$. This linear regression method can also incorporate the upper limits on the bulge mass measurements of the 89 SDSS galaxies measured by \citet[][see Section \ref{sec:galmass}]{simard11}, which is shown by the solid line in Figure~\ref{fig:bulgevsbh}, by treating them as `censored values' \citep[see Section 7.2 of][]{kelly07}.
 
 Using \textsc{linmix}, I also fit to the observations of 30 early-type galaxies from \citet{haringrix04}. Despite the fact that galaxies in the \textsc{discdom} sample are disc dominated and contain either a pseudo-bulge or no bulge, they preferentially lie above the relationship between black hole and bulge stellar mass derived using the bulge dominated galaxies of \citet{haringrix04}, as seen in Figure~\ref{fig:bulgevsbh}. 
 
@@ -502,6 +485,25 @@ I consider how the black hole mass compares to the Eddington ratio, or accretion
 Within the \textsc{qsocontrol} sample, 108 galaxies were morphologically classified by the Galaxy Zoo 1 project \cite{lintott08, Lintott11}, all of which have a debiased combined spiral vote fraction (Galaxy Zoo 1 did not ask whether a galaxy was a disc, therefore we can approximate the combined spiral vote fraction as a disc vote fraction) of $p_{CS} < 0.5$ and mean value of $\left<p_{CS} \right> = 0.17$.  The \textsc{qsocontrol} sample is therefore mainly comprised of bulge dominated galaxies unlike the \textsc{discdom} sample. 
 
 Slightly higher accretion rates are therefore occurring in the AGN of the galaxies in the \textsc{discdom} sample than in a bulge dominated \textsc{qsocontrol} sample. 
+
+The colour magnitude diagram for the \textsc{discdom} sample is also shown in Figure~\ref{fig:cmdmdot} in comparison to the SDSS sample and green valley definition from \citet{Baldry04}. The unobscured AGN host galaxies in the \textsc{discdom} sample are found across the entirety of this parameter space, however those with higher black hole mass accretion rates are found preferentially in the green valley and at brighter r-band magnitudes. 
+
+\begin{figure*}
+\centering
+\includegraphics[width=\textwidth]{agn/mass_bh_total_mass_fit_linmix_fit.pdf}
+\caption[Black hole stellar mass relation for the \textsc{discdom} sample]{Total stellar mass against the black hole mass of the 101 galaxies, including those observed by SDSS (crosses), with the IDS on INT (blue squares) and detections from \citet[open cirlces]{Simmons13}. The best fit line to the data points and two-dimensional errors from linear regression is shown (solid line) with $\pm3\sigma$ (grey shaded). I also show the best fit found using this same method to the early-type galaxies of \citet{haringrix04} (dashed line) with $\pm3\sigma$ (red shaded) and the measured values shown by the red circles. Despite the fact that these galaxies are predominantly disc dominated they are found in the same region of parameter space as the bulge dominated systems used to derive the \citet{haringrix04} relationship (see discussion in Section \ref{sec:intdiscussion}).
+}
+\label{fig:totvsbh}
+\end{figure*}
+
+\begin{figure*}
+\centering
+\includegraphics[width=\textwidth]{agn/mass_bh_bulge_limits_INT_simmons13_measurements_linmix_fit.pdf}
+\caption[Black hole bulge mass relation for the \textsc{discdom} sample]{The upper limits on the calculated bulge masses are plotted against the black hole mass with the best fit to these upper limits and two-dimensional errors using linear regression methods (solid line) shown with $\pm3\sigma$ (grey shaded). The dashed line shows the fit if the upper limits are not treated as such. I also show the best fit found using this same method to the early-type galaxies of \citet{haringrix04} (dashed line) with $\pm3\sigma$ (red shaded) and the measured values shown by the red circles. Despite the fact that these galaxies are predominantly disc dominated they will are most likely to lie above the \citet{haringrix04} relationship found for bulge dominated systems (see discussion in Section \ref{sec:intdiscussion}).
+}
+\label{fig:bulgevsbh}
+\end{figure*}
+
 
 \begin{figure}
 \centering
@@ -523,7 +525,7 @@ Slightly higher accretion rates are therefore occurring in the AGN of the galaxi
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{agn/CMD_DISCDOM_coloured_accretion_rate.pdf}
-\caption[Colour-magnitude diagram for the DISCDOM sample, coloured by black hole mass accretion rate]{Optical colour-magnitude diagram showing the positions of the \textsc{diskdom} sample (circles) in comparison to the SDSS DR7 sample from \citet{baldry04}. The galaxies of the \textsc{discdom} sample are coloured by their black hole mass accretion rate, $\dot{m}$ (see Equation \ref{eq:mdot}). The definition between the blue cloud and red sequence  from \citet{baldry04} is shown by the solid line (as defined in Equation~\ref{eqgv}) with $\pm~1\sigma$ shown by the dashed lines. The \textsc{discdom} sample are found across the colour magnitude diagram, however those with higher mass accretion rates are found preferentially in the green valley and at brighter r-band magnitudes.}
+\caption[Colour-magnitude diagram for the DISCDOM sample, coloured by black hole mass accretion rate]{Optical colour-magnitude diagram showing the positions of the \textsc{diskdom} sample (circles) in comparison to the SDSS DR7 sample from \citet{Baldry04}. The galaxies of the \textsc{discdom} sample are coloured by their black hole mass accretion rate, $\dot{m}$ (see Equation \ref{eq:mdot}). The definition between the blue cloud and red sequence  from \citet{Baldry04} is shown by the solid line (as defined in Equation~\ref{eqgv}) with $\pm~1\sigma$ shown by the dashed lines. The \textsc{discdom} sample are found across the colour magnitude diagram, however those with higher mass accretion rates are found preferentially in the green valley and at brighter r-band magnitudes.}
 \label{fig:cmdmdot}
 \end{figure}
 
@@ -536,5 +538,28 @@ Slightly higher accretion rates are therefore occurring in the AGN of the galaxi
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+The large number of purely disk galaxies of the \textsc{discdom} sample hosting growing SMBHs provides a very powerful probe of the simultaneous evolution of galaxies and their black holes driven without typical bulge-forming mechanisms. Despite the rarity of the morphology of these \textsc{discdom} galaxies, they are not found in common areas of black-hole-galaxy scaling relations as seen in Figures~\ref{fig:totvsbh}, \ref{fig:bulgevsbh} \& \ref{fig:mbhvsbol} frequented by typical AGN host galaxies of all morphologies (they also lie in the common regions of the local $M_{BH}-\lambda_{Edd}$ plane shown in Figure 1 of the review paper of \citealt{alexander12}). Significant black hole growth has occurred up to $M_{BH}\sim10^8 - 10^9~\rm{M}_{\odot}$ in the \textsc{discdom} sample whilst the disk dominated nature of the galaxy has been preserved. Simulations have repeatedly shown that mergers with mass ratios larger than 1:10 (i.e. mergers where the mass of the satellite is greater than $10\%$ of the main galaxy's mass) will form a classical bulge \citep{walker96, hopkins11, tonini16}, therefore how is this mass growth possible in the absence of such a major merger dominated (and minor merger limited) formation history?
+
+Using Equation~\ref{eq:mdot} and given the bolometric luminosities of the \textsc{discdom} sample, the black hole mass accretion rates can be estimated to lie in the range $0.01 \leq \dot{m} \geq 0.37 ~\rm{M}_{\odot}~\rm{yr}^{-1}$. Simulations by \citet{crockett11} and more recently by \citep{diteodoro14} show that such accretion rates are completely achievable by cold accretion of minor satellites with mass ratios less than 1:10 (i.e. the mass of the satellite galaxy is less than $10\%$ of the main galaxy mass). However, there is also evidence that such accretion rates may also be possible via merger free, secular processes alone. One such secular process, is bar driven gas inflow into the central regions of galaxies. Simulations of barred galaxies have repeatedly shown that gas inflow rates due to a morphological bar range from $0.1-\rm{few} ~\rm{M}_{\odot}~\rm{yr}^{-1}$ \citep{sakamoto96, maciejewski02, regan04, emsellem05, lin13} and may increase to up to $\sim 7 ~\rm{M}_{\odot}~\rm{yr}^{-1}$ \citep{friedli93} with increasing bar length, bar strength and axis ratio. 
+These simulations do struggle to show that this gas which is funnelled to the central regions of the galaxy is indeed accreted into the central few parsecs, often accumulating in a nuclear ring and causing a starburst \citep{regan04}. Similarly, no observational correlation has yet been found between the presence of a bar and and that of an AGN either locally \citep{ho97, malkan98, erwin02, lee12,cisterns13} or out to $z\sim1$ \citep{cheung15}. I estimate a bar fraction in this sample (which is by no means complete), by visual inspection of the SDSS images (see Figure~\ref{fig:exampleimages}), of $f_{\rm{bar}} \sim 0.42$; this is a lower limit due to the edge on nature of some of the galaxies in the \textsc{discdom} sample.
+
+Using these calculated black hole mass accretion rates, the time required to grow the black holes in the \textsc{diskdom} sample from a seed mass of $10^2 \rm{M}_{\odot}$ can be derived. This calculation assumes that the black holes have grown at the bolometric luminosity currently observed since the mass at which that luminosity was the Eddington luminosity and prior to this underwent Eddington limited growth. This means that the accretion rates, $\dot{m}$, calculated will be the maximum rates at which the black holes have grown over their lifetimes. This is a conservative assumption but gives an estimate of the total time these black holes would need to spend in actively growing phase if the calculated rates are typical of black holes residing in disk dominated host galaxies. The mean (median) time taken for the black holes of the \textsc{discdom} sample to grow from a seed black hole mass is $\sim 1.68 \rm{Gyr}$ ($\sim 0.37 ~\rm{Gyr}$), with a range of times from $\sim 0.005 - 38 ~\rm{Gyr}$. A time of $\sim 38 ~\rm{Gyr}$ was calculated for two of the most massive black holes in the \textsc{discdom} sample, with very low current Eddington ratios (see Figure~\ref{fig:mbhvsbol}. Since this time frame is beyond the calculated age of the Universe \citep{} we can assume that this value is an overestimate of the time taken to grow these black holes. Since AGN are believed to go through a duty cycle of varying accretion rates \citep{ref,ref, ref, schawinski16}, then we can assume that these two black holes were accreting at a higher rate at some point in their history. If these two black holes are assumed to grow within the median (mean) time derived for the rest of the \textsc{discdom} sample, then the past accretion rate will have been on the order, $\dot{m} \sim 7.95 ~(1.73) \rm{M}_{\odot}~\rm{yr}^{-1}$. As discussed earlier, similar gas inflow rates due to the presence of a bar have been simulated \citep{friedli93, emsellem05}. The two host galaxies are at too high a redshift however to allow the detection of a morphological bar in the SDSS image. 
+
+The black hole mass accretion rates are shown in Figure~\ref{fig:cmdmdot}, wherein the locations of the \textsc{discdom} sample on the optical colour magnitude diagram are shaded by $\dot{m}$. Those hosts with higher black hole mass accretion rates are found preferentially in the green valley and at brighter r-band magnitudes. This once again supports the arguments of Section~\ref{sec:agnfeedback} that feedback from AGN could cause galaxies to quench and therefore transition through the green valley after a sustained period of high mass accretion.
+
+
+
+Since the disc galaxies in this sample have different dynamical histories to bulge dominated galaxies, their black hole masses are not expected to correlate in the same way to their stellar masses if different dynamical histories lead to different mechanisms for black hole growth. However, Figure~\ref{fig:totvsbh} shows how the black hole and total stellar masses of the \textsc{discdom} sample occupy the same region of parameter space as the bulge dominated elliptical galaxies used to derive the \citet{haringrix04} relationship. Similarly Figure~\ref{fig:bulgevsbh} shows how the black hole masses of the \textsc{diskdom} sample (which contain either no bulge, or a possible small pseudo bulge) lie well above the \citet{haringrix04} relationship, particularly when the upper limits on \textsc{discdom} bulge masses are taken into account. In other words, given what we know about black hole growth mechanisms, the black holes in these disk dominated systems are $\sim1-2~\rm{dex}$ more massive than they should be, given the mass (or lack thereof) of their bulge component. 
+
+This is in agreement with the results of \citet{Simmons13} who found a similar excess in the black hole masses of $\sim 1.5~\rm{dex}$ and $\sim 2~\rm{dex}$ for the two measured black hole masses in their sample of 13 purely disk galaxies. Both this result and the results shown in Figures~\ref{fig:totvsbh} \& \ref{fig:bulgevsbh} at first seem to be in contradiction with previous works which find that galaxies with pseudo-bulges have lower black hole masses than predicted by the typical scaling relation \citep[see work by][]{greene08, hu09, jiang11a, mathur12, ho14}. However, all these studies are biased by their sample selection methods, first selecting based on black hole mass to produce a sample of low mass black holes ($M_{BH} < 10^6 ~\rm{M}_{\odot}$) within which they hoped to find bulgeless or pseudo-bulge morphologies. With the larger sample shown in Figure~\ref{fig:bulgevsbh}, we can see that the fitted relationship between the black hole mass and the upper limits of the measured bulge masses of the \textsc{discdom} sample (solid black line), intersects with that of the elliptical sample of \citet{haringrix04} at $M_{BH} \sim 10^{6.4} ~\rm{M}_{\odot}$. At this point, the relationship predicts that for disk dominated galaxies the black hole masses will indeed be less than those predicted for bulge dominated systems, as concluded by the studies referenced above. 
+
+Splitting the AGN host population by morphology in this way however, also leads to a biased conclusion. As discussed in Chapter~\ref{morph}, the strength of the \textsc{popstarpy} method lies partly due to the fact that no thresholds are applied to the GZ morphological vote fractions, allowing the dominance of intermediate quenching rates across the colour magnitude to be revealed (see Section~\ref{sec:morphresults}). Similarly, if one does not \emph{discriminate} against morphology and a linear regression fit is made to all galaxies in the \textsc{discdom} sample (with proper consideration of upper limits) along with those from \citet{haringrix04} and \citet{Simmons13}, the result is an almost vertical line in the bulge-black hole mass plane. This suggests that there is perhaps no intrinsic correlation between black hole mass and galaxy bulge mass across the full morphological spectrum of galaxies. 
+
+This argument is supported by the agreement between the relationships between the total stellar and black hole mass for the \textsc{discdom} and \citet{haringrix04} samples shown in Figure~\ref{fig:totvsbh}. This agreement arises despite the two extremes in galaxy formation histories. This indicates that the mechanisms driving the dynamical and morphological structure of the galaxy may not be fundamental to the growth of the black hole. The black hole-galaxy relations observed in the $M_{BH}$-$\sigma$, $M_{BH}$-$M_{\rm{bulge}}$ and $M_{BH}$-$M_{*}$ planes although demonstrating a correlation, have never implied a \emph{causation}. All of these parameters however, share mutual correlations to the overall gravitational potential of the dark matter halo of the galaxy \citep{booth10, volonteri11}, suggesting the true cause of the black-hole galaxy scaling relations is an outcome of hierarchical galaxy evolution \citet{jahnke11} regardless of merger history of the galaxy. 
+
+
+This once again supports the arguments of Section~\ref{sec:agnfeedback} that feedback from AGN could cause galaxies to quench and therefore transition through the green valley after a sustained period of high mass accretion.
+
+ 
 
 \section{Conclusions}\label{sec:agnconclusion}
