@@ -272,7 +272,7 @@ An initial sample of AGN was selected using the W2R sample of \citet{edelson12},
 \begin{figure*}
 \centering
 \includegraphics[height=0.9\textheight]{agn/mosaic_all_diskdom.pdf}
-\caption[SDSS images of DISKDOM sample]{Postage stamp SDSS images of the $96$ galaxies within the \textsc{discdom} sample for which we have SDSS spectra. The scale for each image is shown by the $5$'' ruler in the top left panel.}
+\caption[SDSS images of DISKDOM sample]{Postage stamp SDSS images of the $96$ galaxies within the \textsc{discdom} sample for which SDSS spectra were available. The scale for each image is shown by the $5$'' ruler in the top left panel.}
 \label{fig:exampleimages}
 \end{figure*}
 
@@ -341,16 +341,29 @@ This provides a control sample of `typical' AGN host galaxies representative of 
 
 In order to study the relation between galaxy and black hole in these disc dominated systems, their properties shall be compared to well tested black hole-galaxy scaling relations. The most famous of these scaling relations is the $M-\sigma$ relations. This is a well studied relationship \citep{magorrian98, merrit01, kormendy01, tremaine01, marconi01, graham07, graham08, greene10, mcconnell11, beifoiri12, mcconnell13} and is hypothesised to arise due to the merger driven co-evolution increasing the mass of the black hole at the same time as increasing the velocity dispersion of the galaxy \citep{peng07, hopkins08a, jahnke11}. The black hole mass has similarly been found to correlate with the stellar mass of the galaxy bulge \citep{marconi03, haringrix04} and the total galaxy stellar mass \citep{cisternas11}. In order to test where the galaxies of the \textsc{discdom} sample lie in these parameter planes in comparison to `typical' AGN host galaxies, black hole, total and bulge stellar masses were derived for each galaxy. In the following section I describe how this was achieved across the \textsc{discdom} sample. 
 
+
+\subsubsection{Photometry}\label{sec:photo}
+
+The AGN contribution to the magnitude of each galaxy, $m_{\rm{gal}}$, is calculated by subtracting the flux in the SDSS {\tt psfMag}, $m_{\rm{psf}}$, from the flux in {\notebsm {\tt modelMag}}, $m_{\rm{model}}$ in a given wave band, $b$ as follows:
+
+\begin{equation}\label{galmag}
+m_{\rm{b, gal}} = -2.5 \log_{10} \left[ 10^{\left(\frac{m_{\rm{b, model}}}{-2.5}\right)} - 10^{\left(\frac{m_{\rm{b, psf}}}{-2.5}\right)} \right],
+\end{equation}
+
+since the normalisation constants in the flux-magnitude conversion will be constant for different sized apertures in a given band. {\tt psfMag} is the best estimate of unresolved emission, while {\tt modelMag} is the optimal quantity for computing aperture-matched source colours\footnote{https://www.sdss3.org/dr10/algorithms/magnitudes.php}. A galaxy magnitude in both the SDSS $u$ and $r$ bands was calculated in order to determine the galaxy $u-r$ colour. 
+
+A similar NUV galaxy magnitude can be calculated using the GALEX apertures, however matching these apertures to those provided by SDSS cannot be done with a large enough degree of accuracy to derive a reliable galaxy $NUV-u$ colour. This therefore means that \textsc{starpy} cannot be run on these unobscured AGN of the \textsc{discdom} sample. However, the locations of the \textsc{discdom} sample on the optical colour-magnitude diagram can still be explored; this is studied in Section~\ref{sec:results} (see Figure~\ref{fig:colmagmdot}). 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Total stellar masses}\label{sec:galmass}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Total stellar masses are calculated using the well-studied relation between stellar mass, absolute galaxy $r$-band magnitude, and $u-r$ galaxy colour \citep[corrected for galactic extinction;][]{schlegel98}, following the method of \citet[][see Section \ref{intro}]{Baldry06}. We remove the AGN contribution to the luminosity and colour of each galaxy by subtracting the flux in the SDSS {\tt psfMag} from the flux in {\notebsm {\tt modelMag}}. {\tt psfMag} is the best estimate of unresolved emission, while {\tt modelMag} is the optimal quantity for computing aperture-matched source colours\footnote{https://www.sdss3.org/dr10/algorithms/magnitudes.php}. Uncertainties are propagated from the colour-magnitude relationship and due to the subtraction of the central AGN component. The average uncertainty on each measurement is $\sim0.3\rm{sex}$. The distribution of the stellar masses calculated for the \textsc{discdom} sample is shown in the right panel of Figure~\ref{fig:discdomdist}. 
+Total stellar masses are calculated using the well-studied relation between stellar mass, absolute galaxy $r$-band magnitude, $M_{\rm{r, gal}}$, and $u-r$ galaxy colour \citep[corrected for galactic extinction;][]{schlegel98}, following the method of \citet[][see Section \ref{intro}]{Baldry06}. Uncertainties are propagated from the colour-magnitude relationship and due to the subtraction of the central AGN component. The average uncertainty on each measurement is $\sim0.3~\rm{dex}$. The distribution of the stellar masses calculated for the \textsc{discdom} sample is shown in the right panel of Figure~\ref{fig:discdomdist}. 
 % not sure if this modelMag vs petroMag vs cModelMag will also be in e.g. Strauss et al. (2002)... must find someone to ask
 
 \subsubsection{Bulge stellar masses}\label{sec:bulgemass}
 
-Calculation of the bulge stellar mass for the \textsc{discdom} sample is more complicated than the stellar mass in the previous section. The nuclear emission (as estimated via comparison of {\tt psfMag} to {\tt modelMag}) is generally between {\notebsm 20 to 200 per cent} of the galaxy-only emission. The presence of the luminous AGN therefore severely compromises the estimates of the bulge-to-total ratio $(B/T)$ in the host galaxy provided by, e.g., the {\tt fracDeV} parameter reported in the SDSS catalogs. The {\tt fracDeV} parameter estimates that $\sim 80\%$ of the galaxies in this sample are pure \citet{devaucouleurs} bulges in the $r$-band, despite the fact that the sample was selected on the basis of clear visual signatures of dominant discs (Figure \ref{fig:exampleimages}). None of the photometric parameters measured by the SDSS pipeline allow for the dual presence of an AGN and a host galaxy. Without such considerations the unresolved AGN light is likely to be attributed to the compact bulge component in a bulge-disc model fit \citep{simmons08,koss11}.
+Calculation of the bulge stellar mass for the \textsc{discdom} sample is more complicated than the stellar mass in the previous section. The nuclear emission (as estimated via comparison of {\tt psfMag} to {\tt modelMag}) is generally between {\notebsm 20 to 200 per cent} of the galaxy-only emission. The presence of the luminous AGN therefore severely compromises the estimates of the bulge-to-total ratio, $(B/T)$, in the host galaxy provided by, e.g., the {\tt fracDeV} parameter reported in the SDSS catalogs. The {\tt fracDeV} parameter estimates that $\sim 80\%$ of the galaxies in this sample are pure \citet{devaucouleurs} bulges in the $r$-band, despite the fact that the sample was selected on the basis of clear visual signatures of dominant discs (Figure \ref{fig:exampleimages}). None of the photometric parameters measured by the SDSS pipeline allow for the dual presence of an AGN and a host galaxy. Without such considerations the unresolved AGN light is likely to be attributed to the compact bulge component in a bulge-disc model fit \citep{simmons08,koss11}.
 
 
 \begin{figure*}
@@ -403,9 +416,16 @@ with the virial method described above.
 
 To obtain an estimate of the FWHM of the broadened $H\alpha$ lines, I performed spectral fitting on each of the SDSS and INT spectra described in Section \ref{sec:spectra} to recover narrow- and broad-line strengths and widths of the $\mha\ 6563$ \AA\ line, by using \gandalf\ \citep{sarzi06} {\notebsm to fit multiple simultaneous lines as well as the continuum of the spectra}. \gandalf\ is optimised for use with SDSS spectra and so using the program with the INT spectra required minimal data re-formatting. I logarithmically binned and de-redshifted the spectra. {\notebsm From the continuum-subtracted best fit}, I determine the FWHM and line flux of the broad and narrow components of the \ha\ line simultaneously, one again employing \emcee\footnote{\url{dan.iel.fm/emcee/}}, the Python implementation of a Markov Chain Monte Carlo \citep[MCMC;][]{mackay03, gw10} affine invariant ensemble sampler by \cite{emcee13} described in Chapter~\ref{starpy}. 
 
-The uncertainties reported by \emcee\ encapsulate the separation of narrow and broad line components in measurement of the FWHM. The reported uncertainties on black hole masses include this source of uncertainty as well as the reported uncertainties in the black hole-broad line relation \citep{gh07a}. There are other sources of uncertainties, such as those involved in implicitly assuming the fixed geometric correction factor ,$f=0.75$ \citep{netzer90}, for each SMBH, the spectral noise, and the error introduced by assuming a Gaussian line profile for all measured broad lines. Determining uncertainties for the last two is outside the scope of this study; based on visual inspection of the line fits, the first is very small compared to the other uncertainties. These fits to the broad and narrow line \ha \ components in the INT spectra are shown in Figure \ref{fig:zoomspectra}.
+The uncertainties reported by \emcee\ encapsulate the separation of narrow and broad line components in measurement of the FWHM. The reported uncertainties on black hole masses include this source of uncertainty as well as the reported uncertainties in the black hole-broad line relation \citep{gh07a}. There are other sources of uncertainties, such as those involved in implicitly assuming the fixed geometric correction factor, $f=0.75$ \citep{netzer90}, for each SMBH, the spectral noise, and the error introduced by assuming a Gaussian line profile for all measured broad lines. Determining uncertainties for the last two is outside the scope of this study; based on visual inspection of the line fits, the first is very small compared to the other uncertainties. These fits to the broad and narrow line \ha \ components in the INT spectra are shown in Figure \ref{fig:zoomspectra}.
 
-The black hole masses for the 101 galaxies of the \textsc{discdom} sample range from {\notebsm $10^6 \mmsun \leq \mmbh \leq 2 \times 10^9 \mmsun$} and the distribution is shown in the left panel of Figure~\ref{fig:discdomdist} in comparison to those from the \textsc{qsocontrol} sample. We compare these black hole masses to galaxy stellar masses and bulge mass upper limits in Section \ref{sec:bhmassrelations} in following Section~\ref{sec:bhmassrelations}. 
+\begin{figure}
+\centering
+\includegraphics[height=0.9 \textheight]{agn/int_zoom_spectra.pdf}
+\caption[Zoom in on $H\alpha$ region of the spectra of 5 galaxies observed with the IDS on the INT]{Reduced spectra from the IDS on the INT for the 5 galaxies observed with the corresponding measured redshift values shown. Spectra are aligned with the broad $H\alpha$ emission line, the gaussian fits to which are shown by the dashed red line.  }
+\label{fig:zoomspectra}
+\end{figure}
+
+The black hole masses for the 101 galaxies of the \textsc{discdom} sample range from {\notebsm $10^6 \mmsun \leq \mmbh \leq 2 \times 10^9 \mmsun$} and the distribution is shown in the left panel of Figure~\ref{fig:discdomdist} in comparison to those from the \textsc{qsocontrol} sample. We compare these black hole masses to galaxy stellar masses and bulge mass upper limits in Section \ref{sec:results}.
 
 \subsubsection{Bolometric Luminosities}\label{sec:eddratios}
 
@@ -418,22 +438,21 @@ The infrared luminosity,  $L_{12\mu m}$, is calculated from the WISE W3 magnitud
 L_{12\mu m} = \left(\frac{4\pi d^2}{10^{-2}~\rm{m}^2}\right)\left( \frac{c}{\lambda}\right) \left(\frac{F_{\nu, 0}}{1\times10^{23}~ \rm{Jy}} \right)10^{\left(\frac{M_{W3}}{-2.5}\right)}.
 \end{equation}
 
-These luminosities were then used to calculate Eddington ratios, $\lambda_{Edd}$, for the \textsc{discdom} sample using the method outlined in Section~\ref{agnsample}. 
-
-
-\begin{figure}
-\centering
-\includegraphics[height=0.9 \textheight]{agn/int_zoom_spectra.pdf}
-\caption[Zoom in on $H\alpha$ region of the spectra of 5 galaxies observed with the IDS on the INT]{Reduced spectra from the IDS on the INT for the 5 galaxies observed with the corresponding measured redshift values shown. Spectra are aligned with the broad $H\alpha$ emission line, the gaussian fits to which are shown by the dashed red line.  }
-\label{fig:zoomspectra}
-\end{figure}
+The derived bolometric luminosities were then used to calculate Eddington ratios, $\lambda_{Edd}$, for the \textsc{discdom} sample using the method outlined in Section~\ref{agnsample}, and the black hole mass accretion rate, $\dot{m}$, using a simple matter to energy conversion:
+\begin{equation}\label{eq:ltomdot}
+L = \frac{E}{t} = f\cdot \frac{mc^2}{t},
+\end{equation}
+where $f =0.15$ \citep{elvis02}, is a lower limit on the radiative efficiency factor (i.e. what fraction of the accreted mass can be turned into radiated energy). The black hole mass accretion rate, $\dot{m}$ can therefore be calculated as:
+\begin{equation}\label{eq:mdot}
+\frac{m}{t} = \left(\frac{\dot{m}}{\rm{M}_{\odot}~\rm{yr}^{-1}}\right) = \left( \frac{1.58\times 10^{-26}}{f} \right) \left( \frac{\rm{cm}~\rm{s}^{-1}}{c} \right)^2 \left( \frac{L_{\rm{bol}}}{\rm{erg}~\rm{s}^{-1}} \right).
+\end{equation}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %  
-\subsection{Results}\label{sec:bhmassrelations}
+\subsection{Results}\label{sec:results}
 %
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -498,6 +517,14 @@ Slightly higher accretion rates are therefore occurring in the AGN of the galaxi
 \caption[Eddington ratio distribution of the bulgeless AGN sample]{Normalised distributions of logarithmic Eddington ratio for the sample of 101 disc dominated galaxies (solid line), compared with that for the redshift matched sample from Shen et al. (2011; dashed line) and the entire sample (dot-dashed line) We also provide the p-values of a 2 sample KS test between the disc dominated sample and each of the quasar samples. We reject the null hypothesis that the two samples are drawn from the same population for the redshift matched quasar sample but accept the null hypothesis for the entire quasar sample of \citet{shen11}.  
 }
 \label{fig:eddratioshen}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{agn/CMD_DISCDOM_coloured_accretion_rate.pdf}
+\caption[Colour-magnitude diagram for the DISCDOM sample, coloured by black hole mass accretion rate]{Optical colour-magnitude diagram showing the positions of the \textsc{diskdom} sample (circles) in comparison to the SDSS DR7 sample from \citet{baldry04}. The galaxies of the \textsc{discdom} sample are coloured by their black hole mass accretion rate, $\dot{m}$ (see Equation \ref{eq:mdot}). The definition between the blue cloud and red sequence  from \citet{baldry04} is shown by the solid line (as defined in Equation~\ref{eqgv}) with $\pm~1\sigma$ shown by the dashed lines. The \textsc{discdom} sample are found across the colour magnitude diagram, however those with higher mass accretion rates are found preferentially in the green valley and at brighter r-band magnitudes.}
+\label{fig:cmdmdot}
 \end{figure}
 
 
