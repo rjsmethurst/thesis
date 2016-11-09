@@ -1,3 +1,29 @@
 \chapter{Discussion}
 
-This is where I blow the lid of quenching. Bring it all together in a big happy family picture. 
+\section{The Big Picture}\label{sec:bigpic}
+
+In the previous sections we have discussed how our results of the changing morphological features and quenching times with projected cluster centric radius in the group and field environments show evidence for both merger, mass, morphological and environmentally driven evolutionary histories. This suggests that not one mechanism is dominant in the group environment but that a superposition of all these effects gives rise to the observed morphology-density and morphology-SFR relations.
+
+Just as galaxy morphology is a spectrum from disc-dominated to spheroid-dominated systems, so too are the quenching mechanisms which cause this morphological transformation. Mergers and interactions are a spectrum of mass ratios from micro mergers \citep{carlin16} through to major mergers, which have increasingly devastating impact upon the morphology and SFR of a galaxy. Morphological quenching mechanisms lie on a spectrum of stellar mass, and have a larger impact on those galaxies with smaller masses. Environmental quenching mechanisms lie on a spectrum of increasing group potential, giving rise to a stronger impact on the SFR of smaller mass galaxies in larger halos.  
+
+All of these mechanisms are striving towards the same end result with no single mechanism dominating over the other, except in the most extreme of environments. Mechanisms traditionally associated with the field, such as mass \& morphology quenching also occur in more dense environments, however will often (after a long infall to the central regions of a group) be overwhelmed by those more rapid and violent mechanisms of mergers and interactions (and the triggered outflows from AGN that are associated with such mechanisms; see \citealt{smethurst16}). Similarly, environmental quenching mechanisms caused by the dense halo and hot IGM are influential as soon as a galaxy falls into a group or cluster, but such processes can also be interrupted momentarily by an interaction or a merger as a galaxy traverses the more dense environment.   
+
+\section{The use of morphology in large surveys}\label{sec:usemorph}
+
+\section{Future Work}\label{sec:future}
+
+Due to the flexibility of the \starpy\ package I believe it will have a significant number of future applications. Firstly by investigating quenching using different wavebands as star formation indicators. For example, using the $U-V$ and $V-J$ colours used to separate star forming and quiescent galaxies on the UVJ diagram \citep{ref} at higher redshift (out to $z\sim4$) in the COSMOS/ULTRAVista fields \citep[e.g. see work by][]{muzzin13} will help to further constrain the relative interplay of quenching mechanisms across the galaxy population with cosmic time. Morphologies are also available for the COSMOS field with the recent release of the GZ:Hubble classifications in \cite{willett16}. Secondly, by expanding the possible SFHs which can be assumed for a galaxy, \starpy\ could be expanded to use Bayesian evidence to chose which is the most appropriate history to characterise the photometry. The currently exponentially declining SFH (the so called ``$\tau$-model") used is considered the simplest possible SFH one can assume and so more detail about he effects of different quenching mechanisms may be elucidated by increasing the complexity. For example, possible SFHs include a starburst model \citep{ref}, adding a third variable for time of galaxy formation \citep{ref}, a Gaussian increase in the SFR, rather than a constant value before $t_q$ or a log-normal SFR \citep{gladders13, abramson16}. 
+
+Along with this expansion of the \starpy\ module itself, several avenues of data exploration are still available using \starpy:
+\begin{enumerate}[(i)]
+\item A comparison of a large population of fast and slow rotators; this would aid in the understanding of the different quenching timescales of wet and dry major mergers. 
+\item A study of barred vs non-barred galaxies using $\{p_{\rm{bar}, {p_{\rm{bar}\}$ in place of $\{p_{\rm{disc}, {p_{\rm{smooth}\}$ used to weight the population densities seen in Chapters \ref{chap:morph} \& \ref{chap:agn} may reveal the impact a bar can have on a galaxy's SFR by funnelling gas to central regions.
+\item Studying the SFHs of low mass satellite galaxies with $M_* \leq 10^{8-9} ~M_{\odot}$ which may have quenching histories dominated by ram pressure stripping for which the observational timescales are still uncertain. 
+\item Expanding the study of the effect of AGN feedback by investigating the SFHs of unobscured Type 1 AGN (however this would require either a more accurate subtraction of the unobscured nuclear emission or a change in the bandpass input to \starpy\ to negate this issue) and those identified with X-ray and IR selection methods. Confirming the result seen in Chapter ~\ref{sec:agnfeedback} with these AGN would coobborate the idea that quenching is occurring across the entire AGN population, and provide further support for the theory of AGN unification \citep{antonucci93, urry95}.
+\end{enumerate}
+
+\section{The use of \starpy\ with IFU data}\label{sec:IFU}
+
+
+
+\section{Hubble space telescope follow up}\label{sec:hst}
