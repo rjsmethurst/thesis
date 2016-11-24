@@ -8,8 +8,18 @@
 \usepackage{natbib}
 \usepackage{multirow}
 \usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{amssymb}
 
-\definecolor{titlecol}{rgb}{0,0,1}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\definecolor{titlecol}{rgb}{0,0,0}
 \definecolor{titlecol2}{rgb}{0,0.65,0}
 \definecolor{titlecol3}{rgb}{0.99,0.4,0.}
 
@@ -104,18 +114,18 @@
 %This thesis is dedicated to\\
 %all of those\\
 %that dare to dream.
-Oy with the poodles already!
+\emph{``The Universe is under no obligation to make sense to you.''} \\- Neil deGrasse Tyson
 \end{dedication}
 
+\begin{abstract}  
+GZ stuff happens.         % include the abstract
+\end{abstract}
+
 \begin{acknowledgements}
-Thank ALLL TEH people. 
-Including, for inspiration and the help with perseverance: T. Swift, B. Springsteen, C. Martin et al., Dr M. Grey, L. Gilmore, R. Gilmore, A. Haim et al., E. Sheeran, 
+ %Thank ALLL TEH people. 
+%Including, for inspiration and the help with perseverance: T. Swift, B. Springsteen, C. Martin et al., Dr M. Grey, L. Gilmore, R. Gilmore, A. Haim et al., E. Sheeran, 
 
 \end{acknowledgements}
-
-\begin{abstract}  
-GZ shit happens.         % include the abstract
-\end{abstract}
 
 \begin{romanpages}          % start roman page numbering
 \tableofcontents            % generate and include a table of contents
@@ -134,7 +144,7 @@ GZ shit happens.         % include the abstract
 \include{agn/agn}
 \include{environment/environment}
 \include{discussion/discussion}
-\include{conclusion/conclusions}
+%\include{conclusion/conclusions}
 
 
 %next line adds the Bibliography to the contents page
