@@ -123,26 +123,48 @@
 %\end{dedication}
 \newpage
 
-\begin{abstract}  
-GZ stuff happens.         % include the abstract
-\end{abstract}
+\begin{abstractlong}  
+
+% What's your big Q?
+What drives the transition of galaxies from the disc dominated, star forming blue cloud to the elliptical dominated, quiescent red sequence? What role does the morphology, central supermassive black hole and galaxy environment play in this transition? 
+% How do you answer them? STARPY?
+I have attempted to answer these questions by using Bayesian statistics to infer a simple star formation history (SFH) parameterised by the time, $t_q$, and exponential rate, $\tau$, that quenching occurs in a galaxy. I use both the optical and NUV photometry of a galaxy in order to infer the posterior distribution of its SFH across the two dimensional $[t_q, \tau]$ parameter space. I then utilise the Galaxy Zoo 2 morphological classifications to obtain a morphology weighted, combined population distribution across each quenching parameter for a sample of galaxies. 
+% What do you find in morph chapter?
+
+I apply this method across the blue cloud, green valley and red sequence of a sample of $126,316$ galaxies and find a clear difference between the quenching timescales preferred by smooth and disc weighted populations, with three major routes through the green valley dominated by smooth (rapid rates, attributed to major mergers), intermediate (intermediate rates, attributed to galaxy interactions) and disc morphologies (slow rates, attributed to secular evolution). I hypothesise that morphological changes occur in systems which have undergone quenching with an exponential rate, $\tau < 1.5~\rm{Gyr}$, in order for the evolution of galaxies in the green valley to match the ratio of smooth to disc galaxies observed in the red sequence.
+% What do you find in AGN feedback chap?
+
+I repeat this SFH analysis for a sample of $1,244$ Type 2 AGN host galaxies and find statistical evidence for recent, rapid quenching, suggesting that this may be caused by AGN feedback. However I find that rapid quenching rates cannot account for all the quenching across the AGN host population; slow quenching rates, attributed to secular evolution, are also significant in the evolution of AGN host galaxies.
+% What do you find in bulgeless AGN?
+
+I investigate this possible secular co-evolution of galaxies and black holes further by measuring the black hole masses of a sample of $101$ bulgeless AGN host galaxies and compare them to typical black hole-galaxy scaling relations. I find that the measured black holes of the bulgeless galaxies are $\sim1-2~\rm{dex}$ more massive than they should be, given their lack of bulges. This suggests that black hole-galaxy scaling relations may arise due to mutual correlations to the overall gravitational potential of the dark matter halo of the galaxy. 
+% What do you find in environment chapter?
+
+I also considered the effect of the group environment on the time and rate that quenching occurs, with respect to the group-centric radius, for $4,629$ satellite galaxies. I find that although mergers, mass quenching and morphological quenching are all occurring in groups, environmentally driven quenching mechanisms are also prevalent. However, I find that these environmentally driven quenching processes are not correlated with the velocity of a satellite within a group, ruling out ram pressure stripping as a possible mechanism. 
+% Sum up your big picture
+
+I discuss how all of these quenching mechanisms are likely to affect a galaxy at some point in its lifetime, acting in concert to reduce the SFR, which in turn produces the wide distribution of quenching timescales seen across the colour-magnitude diagram.
+
+\end{abstractlong}
 
 \begin{originality}
-The work presented in this thesis was carried out by me at the Department of Astrophysics, Univeristy of Oxford between October 2013 and December 2016, under the supervision of Prof. Chris Linttot. It was funded by a Science Technology Failities Council Studentship Grant Code ST/K502236/1. I hereby declare that no part of this thesis has been submtted in support of another degree, diploma or other qualification at the University of Oxford or other higher learning insitute. Except where otherwise stated or where reference is made to the work of others, the work in this thesis is entirely my own.
+I carried out the work presented in thesis at the Department of Astrophysics, University of Oxford between October 2013 and December 2016, under the supervision of Prof. Chris Lintott. It was funded by a Science Technology Facilities Council Studentship Grant Code ST/K502236/1. I hereby declare that no part of this thesis has been submitted in support of another degree, diploma or other qualification at the University of Oxford or other higher learning institute. Except where otherwise stated or where reference is made to the work of others, the work in this thesis is entirely my own.
 
-The work in Chapters~\ref{chap:starpy} \& \ref{chap:morph} is based on the peer-reviewed, published paper \citealt{smethurst15}, \mnras, 450, 435, of which I am the lead author. Similarly, Section~\ref{sec:agnfeedback} is based on the peer-reviewed, published paper \citealt{smethurst16}, \mnras, 463, 2986, of which I am the lead author. 
+The work in Chapters~\ref{chap:starpy}, \ref{chap:morph} \& \ref{sec:agnfeedback} is based on the peer-reviewed, published papers \citealt{smethurst15}, \mnras, 450, 435, and \citealt{smethurst16}, \mnras, 463, 2986, for which I am the lead author. 
 
-The work presented in Section~\ref{sec:intbulgeless} was carried out in collaboration with Dr. Brooke Simmons and Prof. Chris Linttot and is in preparation for submission to \mnras.
+The work presented in Section~\ref{sec:intbulgeless} was carried out in collaboration with Dr. Brooke Simmons and Prof. Chris Lintott and is in preparation for submission to \mnras.
 
-The work throughout this thesis relies on observations from the Sloan Digital Sky Survey (SDSS). Funding for SDSS-III has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, and the U.S. Department of Energy Office of Science. The SDSS-III web site is http://www.sdss3.org/.
+The work throughout this thesis relies on observations from the Sloan Digital Sky Survey (SDSS). Funding for SDSS-III has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, and the U.S. Department of Energy Office of Science. The SDSS-III web site is \url{http://www.sdss3.org/}.
 
 %SDSS-III is managed by the Astrophysical Research Consortium for the Participating Institutions of the SDSS-III Collaboration including the University of Arizona, the Brazilian Participation Group, Brookhaven National Laboratory, Carnegie Mellon University, University of Florida, the French Participation Group, the German Participation Group, Harvard University, the Instituto de Astrofisica de Canarias, the Michigan State/Notre Dame/JINA Participation Group, Johns Hopkins University, Lawrence Berkeley National Laboratory, Max Planck Institute for Astrophysics, Max Planck Institute for Extraterrestrial Physics, New Mexico State University, New York University, Ohio State University, Pennsylvania State University, University of Portsmouth, Princeton University, the Spanish Participation Group, University of Tokyo, University of Utah, Vanderbilt University, University of Virginia, University of Washington, and Yale University.
 
-The work throughout this thesis is based on observations made with the NASA Galaxy Evolution Explorer. GALEX is operated for NASA by the California Institute of Technology under NASA contract NAS5-98034. 
+The work throughout this thesis is based on observations made with the NASA Galaxy Evolution Explorer. GALEX is operated for NASA by the California Institute of Technology under NASA contract NAS5-98034.
 
-This thesis made extensive use of the Tool for Operations on Catalogues And Tables \citep[TOPCAT;][]{taylor05} and the {\tt astropy} Python module \citep{astropy13}. This research has also made use of NASA’s ADS service and Cornell’s ArXiv.
+This thesis has been made possible by the participation of more than $250,000$ users in the Galaxy Zoo project. Their contributions are individually acknowledged at \url{http://authors. galaxyzoo.org}.
 
-The copyright of this thesis rests with the author. No quotation from it or information derived from it may be published without the prior conesnt and acknowledgement of its author. 
+This thesis made extensive use of the Tool for Operations on Catalogues And Tables \citep[TOPCAT;][]{taylor05} and the {\tt astropy} Python module \citep{astropy13}. This research has also made use of NASA's ADS service and Cornell's ArXiv.
+
+The copyright of this thesis rests with the author. No quotation from it or information derived from it may be published without the prior consent and acknowledgement of its author. 
 
 \begin{flushright}
 Rebecca J. Smethurst
@@ -192,7 +214,7 @@ Rebecca J. Smethurst
 
 \begin{center}
 
-\emph{``Mischief Managed.''}
+\emph{Mischief Managed.}
 \end{center}
 
 
