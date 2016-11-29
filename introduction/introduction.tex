@@ -233,7 +233,7 @@ Galaxy colours were not corrected for intrinsic dust attenuation. This is of par
 
 Galaxy stellar masses are estimated using the method outlined in \cite{Baldry06}, who  fit a relationship between the observed $u-r$ colour and the $r$-band mass-to-light ratio, $(M_*/L_r)$, of a galaxy as:
 \begin{equation}\label{baldrymlur}
-\log(M_*/L_r) =
+\log\left(\frac{M_*}{L_r}\right) =
 \begin{cases}
 -0.95 + 0.56(u-r) & \text{if } (u-r) < 2.1 \\
 -0.16 + 0.18(u-r) & \text{if } (u-r) \geq 2.1. 
@@ -241,7 +241,7 @@ Galaxy stellar masses are estimated using the method outlined in \cite{Baldry06}
 \end{equation}
 The $r$-band mass-to-light ratio is calculated from the r-band absolute magnitude, $\mathcal{M}_r$, of a galaxy as outlined in \cite{blanton01}:
 \begin{equation}\label{blanton}
-\log(M_*/M_{\odot}) = \left(\frac{\mathcal{M}_{r,\odot} - \mathcal{M}_r}{2.5}\right) + \log\left(\frac{M_*}{L_r}\right),
+\log\left(\frac{M_*}{M_{\odot}}\right) = \left(\frac{\mathcal{M}_{r,\odot} - \mathcal{M}_r}{2.5}\right) + \log\left(\frac{M_*}{L_r}\right),
 \end{equation}
 where $\mathcal{M}_{r,\odot}$ and $M_{\odot}$ are the $r$-band absolute magnitude and stellar mass of the Sun respectively. 
 
